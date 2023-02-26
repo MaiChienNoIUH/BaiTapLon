@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 2000px;
+    scroll-behavior: smooth;
+}
+
+#header{
+    width: 100%;
+    background-color: rgb(165, 189, 189);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav{
+    float: left;
+    padding: 24px 12px;
+}
+
+.nav, .subnav{
+    list-style: none;
+}
+
+.nav li{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.nav li a{
+    display: inline-block;
+    padding: 20px 24px;
+    color: white;
+    background-color: #000;
+    
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav .subnav li a{
+    text-transform: none;
+}
+
+.nav li:hover a{
+    background-color: #cccccc;
+    color: #000;
+}
+
+.nav .subnav{
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav li:hover .subnav{
+    display: block;
+}
+
+.nav .subnav a{
+    padding: 0 24px;
+    height: 46px;
+}
+
+.nav .subnav li a{
+    background-color: #fff;
+    width: 230px;
+    line-height: 46px;
+}
+
+.nav .subnav li{
+    display: block;
+}
+
+.nav .subnav li:hover a{
+    color: #000;
+    background-color: #cccccc;
+    /* width: 87%; */
+    display: block;
+}
+
+.nav .nav-arrow-down{
+    padding: 4px;
+    font-size: 12px;
+}
+
+#header .login a{
+    padding-right: 20px;
+    float: right;
+
+    color: #000;
+    text-align: center;
+    line-height: 150px;
+    font-size: 24px;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+#header .login:hover a{
+    opacity: 1;
+}
+
+#header .search-btn{
+    float: right;
+    text-align: center;
+    height: 150px;
+}
+
+#header .search-btn input{
+    
+    text-align: center;
+    line-height: 150px;
+    margin-right: 12px;
+    border: 2px splid blue;
+}
+
+#header .search-btn .search-icon{
+    padding: 12px;
+    font-size: 12px; 
+    text-align: center;
+    line-height: 150px;
+}
+
+#header .search-btn .search-icon:hover{
+    background-color: red;
+    /* Hiện dấu tay */
+    cursor: pointer;
+}
+
