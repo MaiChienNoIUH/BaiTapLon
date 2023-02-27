@@ -1,136 +1,253 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    
+    box-sizing: border-box;
 }
 
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
-    height: 2000px;
     scroll-behavior: smooth;
 }
 
-#header{
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 98px;
+    padding: 16px 0;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background: #ffb900;
+}
+
+#header {
     width: 100%;
-    background-color: rgb(165, 189, 189);
+    background-color: #e6f0ff;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
 }
 
-.nav{
-    float: left;
-    padding: 24px 12px;
+#header img {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    object-fit: cover;
 }
 
-.nav, .subnav{
+#header .container {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 12px;
+}
+
+.nav,
+.subnav {
     list-style: none;
 }
 
-.nav li{
+.nav li {
     position: relative;
     display: inline-block;
-    
 }
 
-.nav li a{
+.nav li a {
     display: inline-block;
-    padding: 20px 24px;
-    color: white;
-    background-color: #000;
-    
+    color: #000;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-.nav .subnav li a{
+.nav .subnav li a {
     text-transform: none;
 }
 
-.nav li:hover a{
-    background-color: #cccccc;
-    color: #000;
+.nav > li:hover > a {
+    text-decoration: underline;
 }
 
-.nav .subnav{
+.nav .subnav {
     display: none;
     position: absolute;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.nav li:hover .subnav{
+.nav li:hover .subnav {
     display: block;
 }
 
-.nav .subnav a{
+.nav .subnav a {
     padding: 0 24px;
     height: 46px;
 }
 
-.nav .subnav li a{
+.nav .subnav li a {
     background-color: #fff;
     width: 230px;
     line-height: 46px;
 }
 
-.nav .subnav li{
+.nav .subnav li {
     display: block;
 }
 
-.nav .subnav li:hover a{
+.nav .subnav li:hover a {
+    display: block;
     color: #000;
     background-color: #cccccc;
-    /* width: 87%; */
-    display: block;
 }
 
-.nav .nav-arrow-down{
+.nav .nav-arrow-down {
     padding: 4px;
     font-size: 12px;
 }
 
-#header .login a{
-    padding-right: 20px;
-    float: right;
-
-    color: #000;
-    text-align: center;
-    line-height: 150px;
-    font-size: 24px;
-    text-decoration: none;
-    opacity: 0.6;
+#header .search-btn {
+    margin-right: auto;
 }
 
-#header .login:hover a{
-    opacity: 1;
-}
-
-#header .search-btn{
-    float: right;
+#header .search-btn input {
+    width: 230px;
+    height: 28px;
     text-align: center;
-    height: 150px;
-}
-
-#header .search-btn input{
-    
-    text-align: center;
-    line-height: 150px;
     margin-right: 12px;
-    border: 2px splid blue;
+    border: 1px solid blue;
 }
 
-#header .search-btn .search-icon{
+#header .search-btn .search-icon {
     padding: 12px;
-    font-size: 12px; 
+    font-size: 12px;
     text-align: center;
-    line-height: 150px;
 }
 
-#header .search-btn .search-icon:hover{
+#header .search-btn .search-icon:hover {
     background-color: red;
-    /* Hiện dấu tay */
     cursor: pointer;
 }
 
+#header .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#header .action-btn .login-btn {
+    color: #000;
+}
+
+#header .action-btn .login-btn:hover {
+    text-decoration: underline;
+}
+
+/* Slider */
+
+#slider {
+    padding-top: 100px;
+}
+
+#slider img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+
+#Content {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#Content .content-top .desc {
+    margin-top: 12px;
+}
+
+#Content .fruits {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#Content .fruits .item {
+    width: calc(100% / 3);
+    height: 446px;
+}
+
+.fruits .item .thumb {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.fruits .item .fruit-info {
+    padding: 16px 22px 22px;
+}
+
+.fruit-info .sub-title {
+    font-size: 20px;
+}
+
+.fruit-info .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.fruit-info .purchasing {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fruit-info .purchasing .price {
+    font-weight: 700;
+    color: #ffb900;
+}
+
+.fruit-info .purchasing .btn {
+    min-width: 200px;
+}
+
+.import-fruit .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 6px;
+}
+
+.import-fruit .dots .dot {
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.import-fruit .dots .dot.active {
+    cursor: default;
+    background: #ffb900;
+}
