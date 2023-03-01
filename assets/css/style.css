@@ -33,6 +33,7 @@ a {
     background: #ffb900;
 }
 
+/* Header */
 #header {
     width: 100%;
     background-color: #e6f0ff;
@@ -77,6 +78,7 @@ a {
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .nav .subnav li a {
@@ -101,16 +103,14 @@ a {
 .nav .subnav a {
     padding: 0 24px;
     height: 46px;
-}
-
-.nav .subnav li a {
-    background-color: #fff;
-    width: 230px;
-    line-height: 46px;
+    font-weight: bold;
 }
 
 .nav .subnav li {
     display: block;
+    background-color: #fff;
+    width: 230px;
+    line-height: 46px;
 }
 
 .nav .subnav li:hover a {
@@ -132,6 +132,7 @@ a {
     width: 230px;
     height: 28px;
     text-align: center;
+    margin-left: 36px;
     margin-right: 12px;
     border: 1px solid blue;
 }
@@ -150,7 +151,7 @@ a {
 #header .action-btn {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 #header .action-btn .login-btn {
@@ -179,7 +180,12 @@ a {
     padding-bottom: 200px;
 }
 
+#Content .import-fruit{
+    margin-top: 80px;
+}
+
 #Content .content-top .desc {
+    text-align: justify;
     margin-top: 12px;
 }
 
@@ -241,8 +247,8 @@ a {
 
 .import-fruit .dots .dot {
     cursor: pointer;
-    width: 6px;
-    height: 6px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: #634700;
 }
@@ -251,3 +257,94 @@ a {
     cursor: default;
     background: #ffb900;
 }
+
+
+/* Begin css footer */
+#footer{
+    width: 100%;
+    height: 500px;
+    /* Đổi màu footer cho đẹp */
+    background-color: rgb(76, 114, 93);
+    padding: 0 20px;
+}
+
+#footer .top-contact{
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#footer .Contact-list-text{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 200px;
+    text-align: justify;
+    list-style: none;
+}
+
+#footer .Contact-list-text li a{
+    color: #FFFFFF;
+    line-height: 2.7;
+}
+
+
+#footer .footer-list-info{
+    height: 420px;
+    padding-top: 20px;
+}
+
+
+.footer-list-info .contact .icon-contact{
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.footer-list-info .contact .icon-contact a{
+    padding: 4px;
+    text-decoration: none;
+    color: #e6f0ff;
+}
+
+.footer-list-info .contact .icon-contact a:hover{
+    background-color: #000;
+}
+
+.footer-list-info .contact{
+    float: left;
+    width: 25%;
+}
+
+.footer-list-info .introduce{
+    margin-left: 80px;
+    float: left;
+    width: 35%;
+}
+
+
+.footer-list-info .service{
+    margin-left: 120px;
+    float: left;
+    width: 15%;
+}
+
+.footer-list-info .attribute{
+    margin-left: 50px;
+    float:left;
+    width: 10%;
+}
+
+
+#footer .footer-text{
+    background-color: rgb(187, 189, 190);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 16px;
+    height: 80px;
+    text-align: center;
+    display: block;
+}
+/* End css footer */
+
+
