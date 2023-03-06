@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 .main-content {
     width: 1170px;
     margin-left: auto;
@@ -180,8 +184,38 @@ a {
     padding-bottom: 200px;
 }
 
-#Content .import-fruit{
+#Content .active-icon {
+    display: flex;
+    gap: 18px;
+    margin-left: auto;
+}
+
+#Content .active-icon .control-btn:hover {
+    color: #fff;
+    background: #ffb900;
+    cursor: pointer;
+}
+
+#Content .active-icon .control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #ffb900;
+    border: 1px solid currentColor;
+    background: transparent;
+}
+
+#Content .fruit-item {
     margin-top: 80px;
+}
+
+#Content .content-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #Content .content-top .desc {
@@ -198,7 +232,6 @@ a {
 
 #Content .fruits .item {
     width: calc(100% / 3);
-    height: 446px;
 }
 
 .fruits .item .thumb {
@@ -237,7 +270,7 @@ a {
     min-width: 200px;
 }
 
-.import-fruit .dots {
+.fruit-item .dots {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,7 +278,7 @@ a {
     gap: 6px;
 }
 
-.import-fruit .dots .dot {
+.fruit-item .dots .dot {
     cursor: pointer;
     width: 12px;
     height: 12px;
@@ -253,98 +286,96 @@ a {
     background: #634700;
 }
 
-.import-fruit .dots .dot.active {
+.fruit-item .dots .dot.active {
     cursor: default;
     background: #ffb900;
 }
 
-
 /* Begin css footer */
-#footer{
-    width: 100%;
-    height: 500px;
+#footer {
     /* Đổi màu footer cho đẹp */
-    background-color: rgb(76, 114, 93);
-    padding: 0 20px;
+    background-color: #2e2100;
+    padding-top: 80px;
 }
 
-#footer .top-contact{
+#footer .container {
+    display: flex;
+    gap: 23.4px;
+    padding-bottom: 38px;
+}
+
+#footer .top-contact {
     text-transform: uppercase;
-    font-size: 26px;
-    color: #FFFFFF;
+    font-size: 24px;
+    color: #e6f0ff;
     margin-bottom: 20px;
 }
 
-#footer .Contact-list-text{
-    color: #FFFFFF;
-    font-size: 20px;
+#footer .Contact-list-text {
+    color: #bfbcb2;
+    font-size: 18px;
     line-height: 1.6;
-    font-weight: 200px;
-    text-align: justify;
     list-style: none;
 }
 
-#footer .Contact-list-text li a{
-    color: #FFFFFF;
+#footer .Contact-list-text li a {
+    color: #bfbcb2;
     line-height: 2.7;
 }
 
-
-#footer .footer-list-info{
-    height: 420px;
-    padding-top: 20px;
+.click-effect > li:hover a {
+    text-decoration: underline;
 }
 
-
-.footer-list-info .contact .icon-contact{
-    margin-top: 50px;
-    font-size: 50px;
+.footer-list-info .contact .icon-contact {
+    margin-top: 18px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-.footer-list-info .contact .icon-contact a{
+.footer-list-info .contact .icon-contact a {
     padding: 4px;
     text-decoration: none;
     color: #e6f0ff;
 }
 
-.footer-list-info .contact .icon-contact a:hover{
+.footer-list-info .contact .icon-contact a:hover {
     background-color: #000;
 }
 
-.footer-list-info .contact{
-    float: left;
-    width: 25%;
+.footer-list-info .contact {
+    width: 32%;
 }
 
-.footer-list-info .introduce{
-    margin-left: 80px;
-    float: left;
-    width: 35%;
+.footer-list-info .introduce {
+    width: 32%;
 }
 
-
-.footer-list-info .service{
-    margin-left: 120px;
-    float: left;
+.footer-list-info .service {
     width: 15%;
 }
 
-.footer-list-info .attribute{
-    margin-left: 50px;
-    float:left;
-    width: 10%;
+.footer-list-info .attribute {
+    width: 15%;
 }
 
+#footer .footer-text {
+    border-top: 1px solid #59554b;
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #e6f0ff;
+}
 
-#footer .footer-text{
-    background-color: rgb(187, 189, 190);
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 16px;
-    height: 80px;
-    text-align: center;
-    display: block;
+.footer-text > h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer-text p {
+    font-size: 18px;
+    font-weight: 400;
 }
 /* End css footer */
-
-
