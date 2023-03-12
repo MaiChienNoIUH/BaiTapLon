@@ -63,7 +63,7 @@ ul {
 .nav {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-right: 12px;
 }
 
@@ -90,10 +90,14 @@ ul {
 }
 
 .nav > li:hover > a {
-    text-decoration: underline;
+    background-color: #ffb900;
+    padding: 10px 3px;
+    font-size: 15px;
+    border-radius: 20px;
 }
 
 .nav .subnav {
+    width: 230px;
     display: none;
     position: absolute;
     border-radius: 5px;
@@ -113,7 +117,6 @@ ul {
 .nav .subnav li {
     display: block;
     background-color: #fff;
-    width: 230px;
     line-height: 46px;
 }
 
@@ -208,7 +211,7 @@ ul {
     background: transparent;
 }
 
-#Content .fruit-item {
+#Content .fruit-list {
     margin-top: 80px;
 }
 
@@ -293,7 +296,6 @@ ul {
 
 /* Begin css footer */
 #footer {
-    /* Đổi màu footer cho đẹp */
     background-color: #2e2100;
     padding-top: 80px;
 }
@@ -366,6 +368,7 @@ ul {
     padding: 28px 0;
     display: flex;
     align-items: center;
+    /* Căn đều 2 phần tử */
     justify-content: space-between;
     color: #e6f0ff;
 }
