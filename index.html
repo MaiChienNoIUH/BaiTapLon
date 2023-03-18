@@ -7,7 +7,7 @@
         <title>Fruit-Bán trái cây trực tuyến</title>
         <link rel="icon" href="assets/img/face-icon/icon_web.png" />
         <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/responsive.css" />
         <link
             rel="stylesheet"
             href="assets/font/themify-icons/themify-icons.css"
@@ -71,20 +71,33 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="mobile-menu-btn">
-                    <i class="menu-icon ti-menu"></i>
-                </div> -->
             </div>
 
             <div id="slider">
                 <!-- Slider 1 -->
-                <img src="assets/img/slider-img3.png" alt="Slider" />
+                <img
+                    src="assets/img/Slider/slider-img1.png"
+                    alt="Happy Fruit"
+                    class="img-fruit active"
+                />
+                <!-- Slider 2 -->
+                <img
+                    src="./assets/img/Slider/slider-img2.webp"
+                    alt="Happy Fruit"
+                    class="img-fruit"
+                />
+                <!-- Slider 3 -->
+                <img
+                    src="./assets/img/Slider/slider-img3.jpg"
+                    alt="Happy fruit"
+                    class="img-fruit"
+                />
             </div>
 
             <div id="Content">
                 <div class="main-content">
-                    <div class="fruit-list">
+                    <!-- Trái cây nhập khẩu -->
+                    <div class="fruit-item import-fruits">
                         <div class="content-top">
                             <div class="info">
                                 <h1 class="title">Trái cây nhập khẩu</h1>
@@ -94,7 +107,7 @@
                                 </p>
                             </div>
                             <div class="active-icon">
-                                <button class="control-btn">
+                                <button class="control-btn prev-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -110,7 +123,7 @@
                                         />
                                     </svg>
                                 </button>
-                                <button class="control-btn">
+                                <button class="control-btn next-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -129,75 +142,247 @@
                             </div>
                         </div>
                         <div class="fruits">
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/nhomaudon.jpg"
-                                        alt="Nho Hàn Quốc"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">
-                                        Nho mẫu đơn Hàn Quốc
-                                    </h3>
-                                    <p class="desc">
-                                        Nho với trái to tròn, vỏ bóng mịn có màu
-                                        xanh hổ phách không bị chát, vị ngọt đậm
-                                        và mọng nước, ăn giòn với hương thơm rất
-                                        đặc trưng.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">900,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <!-- Group 1 -->
+                            <div class="group group-item1">
+                                <!-- Item 1 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/nhomaudon.jpg"
+                                            alt="Nho Hàn Quốc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Nho mẫu đơn Hàn Quốc
+                                        </h3>
+                                        <p class="desc">
+                                            Nho với trái to tròn, vỏ bóng mịn có
+                                            màu xanh hổ phách không bị chát, vị
+                                            ngọt đậm và mọng nước, ăn giòn với
+                                            hương thơm rất đặc trưng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">900,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/taoxanhmy.jpg"
+                                            alt="Táo Mỹ"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">Táo xanh Mỹ</h3>
+                                        <p class="desc">
+                                            (Táo Xanh Mỹ) có nguồn gốc từ Úc du
+                                            nhập vào Mỹ năm 1868. Táo có màu
+                                            xanh lá, vị chua đậm, rất giòn,
+                                            nhiều nước.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">140,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/dualuoinhat.jpg"
+                                            alt="Dưa Lưới Nhật"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Dưa lưới Nhật Bản
+                                        </h3>
+                                        <p class="desc">
+                                            Dưa lưới Nhật Bản hình tròn hoặc
+                                            dài, da màu xanh, khi chín thì ngả
+                                            vàng và thịt dưa lưới màu vàng cam
+                                            hoặc vàng đỏ.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">500,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/taoxanhmy.jpg"
-                                        alt="Táo Mỹ"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">Táo xanh Mỹ</h3>
-                                    <p class="desc">
-                                        (Táo Xanh Mỹ) có nguồn gốc từ Úc du nhập
-                                        vào Mỹ năm 1868. Táo có màu xanh lá, vị
-                                        chua đậm, rất giòn, nhiều nước.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">140,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item2">
+                                <!-- Item 4 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/nhomaudon.jpg"
+                                            alt="Nho Hàn Quốc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Nho mẫu đơn Hàn Quốc 2
+                                        </h3>
+                                        <p class="desc">
+                                            Nho với trái to tròn, vỏ bóng mịn có
+                                            màu xanh hổ phách không bị chát, vị
+                                            ngọt đậm và mọng nước, ăn giòn với
+                                            hương thơm rất đặc trưng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">900,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/taoxanhmy.jpg"
+                                            alt="Táo Mỹ"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">Táo xanh Mỹ 2</h3>
+                                        <p class="desc">
+                                            (Táo Xanh Mỹ) có nguồn gốc từ Úc du
+                                            nhập vào Mỹ năm 1868. Táo có màu
+                                            xanh lá, vị chua đậm, rất giòn,
+                                            nhiều nước.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">140,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/dualuoinhat.jpg"
+                                            alt="Dưa Lưới Nhật"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Dưa lưới Nhật Bản 2
+                                        </h3>
+                                        <p class="desc">
+                                            Dưa lưới Nhật Bản hình tròn hoặc
+                                            dài, da màu xanh, khi chín thì ngả
+                                            vàng và thịt dưa lưới màu vàng cam
+                                            hoặc vàng đỏ.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">500,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/dualuoinhat.jpg"
-                                        alt="Dưa Lưới Nhật"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">Dưa lưới Nhật Bản</h3>
-                                    <p class="desc">
-                                        Dưa lưới Nhật Bản hình tròn hoặc dài, da
-                                        màu xanh, khi chín thì ngả vàng và thịt
-                                        dưa lưới màu vàng cam hoặc vàng đỏ.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">500,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item3">
+                                <!-- Item 7 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/nhomaudon.jpg"
+                                            alt="Nho Hàn Quốc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Nho mẫu đơn Hàn Quốc 3
+                                        </h3>
+                                        <p class="desc">
+                                            Nho với trái to tròn, vỏ bóng mịn có
+                                            màu xanh hổ phách không bị chát, vị
+                                            ngọt đậm và mọng nước, ăn giòn với
+                                            hương thơm rất đặc trưng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">900,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/taoxanhmy.jpg"
+                                            alt="Táo Mỹ"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">Táo xanh Mỹ 3</h3>
+                                        <p class="desc">
+                                            (Táo Xanh Mỹ) có nguồn gốc từ Úc du
+                                            nhập vào Mỹ năm 1868. Táo có màu
+                                            xanh lá, vị chua đậm, rất giòn,
+                                            nhiều nước.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">140,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/dualuoinhat.jpg"
+                                            alt="Dưa Lưới Nhật"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Dưa lưới Nhật Bản 3
+                                        </h3>
+                                        <p class="desc">
+                                            Dưa lưới Nhật Bản hình tròn hoặc
+                                            dài, da màu xanh, khi chín thì ngả
+                                            vàng và thịt dưa lưới màu vàng cam
+                                            hoặc vàng đỏ.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">500,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -208,8 +393,8 @@
                             <span class="dot"></span>
                         </div>
                     </div>
-
-                    <div class="fruit-list">
+                    <!-- Trái cây cao cấp -->
+                    <div class="fruit-item premium-fruits">
                         <div class="content-top">
                             <div class="info">
                                 <h1 class="title">Trái cây Cao cấp</h1>
@@ -220,7 +405,7 @@
                                 </p>
                             </div>
                             <div class="active-icon">
-                                <button class="control-btn">
+                                <button class="control-btn prev-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -236,7 +421,7 @@
                                         />
                                     </svg>
                                 </button>
-                                <button class="control-btn">
+                                <button class="control-btn next-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -255,84 +440,277 @@
                             </div>
                         </div>
                         <div class="fruits">
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/CherryDoUc.jpg"
-                                        alt="Cherry Uc"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">Cherry Đỏ Úc</h3>
-                                    <p class="desc">
-                                        Cheery Úc là loại trái cây cung cấp
-                                        nhiều vitamin, các khoáng chất thiết yếu
-                                        cho cơ thể. Chính vì sự "Đắt đỏ" ấy mà
-                                        cherry được ví là "kim cương của các
-                                        loại hoa quả". Chúng giàu chất xơ nên
-                                        tốt cho tiêu hóa.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">690,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item1">
+                                <!-- Item 1 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/CherryDoUc.jpg"
+                                            alt="Cherry Uc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">Cherry Đỏ Úc</h3>
+                                        <p class="desc">
+                                            Cheery Úc là loại trái cây cung cấp
+                                            nhiều vitamin, các khoáng chất thiết
+                                            yếu cho cơ thể. Chính vì sự "Đắt đỏ"
+                                            ấy mà cherry được ví là "kim cương
+                                            của các loại hoa quả". Chúng giàu
+                                            chất xơ nên tốt cho tiêu hóa.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">690,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/ChaLaNamPhi.jpg"
+                                            alt="Chà là tươi Nam Phi"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Chà là tươi Nam Phi
+                                        </h3>
+                                        <p class="desc">
+                                            Chà là tươi Nam Phi có đặc tính trái
+                                            còn sống thì có vị chát nhẹ của vỏ
+                                            nhưng ăn quen 1 lúc thì không còn
+                                            cảm giác chát nữa và giòn ngọt
+                                            thanh, khi trái chín 1 chút sẽ
+                                            chuyển qua giòn nhẹ và ngọt đậm hơn,
+                                            ăn dẻo và ngọt.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">520,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/TaoMatVangNhat.jpg"
+                                            alt="Táo đỏ sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Táo đỏ sấy khô
+                                        </h3>
+                                        <p class="desc">
+                                            Táo mật vàng IWATE JUNJO Nhật Bản là
+                                            giống táo quý hiếm cực kì khó trồng
+                                            và độc đáo bậc nhất thế giới. Vỏ rất
+                                            mỏng rất nhiều nước. Là món quà tặng
+                                            cao cấp sang trọng trong văn hóa
+                                            Nhật Bản.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price"
+                                                >1,100,000đ</span
+                                            >
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/ChaLaNamPhi.jpg"
-                                        alt="Chà là tươi Nam Phi"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">
-                                        Chà là tươi Nam Phi
-                                    </h3>
-                                    <p class="desc">
-                                        Chà là tươi Nam Phi có đặc tính trái còn
-                                        sống thì có vị chát nhẹ của vỏ nhưng ăn
-                                        quen 1 lúc thì không còn cảm giác chát
-                                        nữa và giòn ngọt thanh, khi trái chín 1
-                                        chút sẽ chuyển qua giòn nhẹ và ngọt đậm
-                                        hơn, ăn dẻo và ngọt.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">520,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item2">
+                                <!-- Item 4 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/CherryDoUc.jpg"
+                                            alt="Cherry Uc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Cherry Đỏ Úc 2
+                                        </h3>
+                                        <p class="desc">
+                                            Cheery Úc là loại trái cây cung cấp
+                                            nhiều vitamin, các khoáng chất thiết
+                                            yếu cho cơ thể. Chính vì sự "Đắt đỏ"
+                                            ấy mà cherry được ví là "kim cương
+                                            của các loại hoa quả". Chúng giàu
+                                            chất xơ nên tốt cho tiêu hóa.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">690,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/ChaLaNamPhi.jpg"
+                                            alt="Chà là tươi Nam Phi"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Chà là tươi Nam Phi 2
+                                        </h3>
+                                        <p class="desc">
+                                            Chà là tươi Nam Phi có đặc tính trái
+                                            còn sống thì có vị chát nhẹ của vỏ
+                                            nhưng ăn quen 1 lúc thì không còn
+                                            cảm giác chát nữa và giòn ngọt
+                                            thanh, khi trái chín 1 chút sẽ
+                                            chuyển qua giòn nhẹ và ngọt đậm hơn,
+                                            ăn dẻo và ngọt.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">520,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/TaoMatVangNhat.jpg"
+                                            alt="Táo đỏ sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Táo đỏ sấy khô 2
+                                        </h3>
+                                        <p class="desc">
+                                            Táo mật vàng IWATE JUNJO Nhật Bản là
+                                            giống táo quý hiếm cực kì khó trồng
+                                            và độc đáo bậc nhất thế giới. Vỏ rất
+                                            mỏng rất nhiều nước. Là món quà tặng
+                                            cao cấp sang trọng trong văn hóa
+                                            Nhật Bản.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price"
+                                                >1,100,000đ</span
+                                            >
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/TaoMatVangNhat.jpg"
-                                        alt="Táo đỏ sấy khô"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">
-                                        Táo đỏ sấy khô
-                                    </h3>
-                                    <p class="desc">
-                                        Táo mật vàng IWATE JUNJO Nhật Bản là
-                                        giống táo quý hiếm cực kì khó trồng và
-                                        độc đáo bậc nhất thế giới. Vỏ rất mỏng
-                                        rất nhiều nước. Là món quà tặng cao cấp
-                                        sang trọng trong văn hóa Nhật Bản.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">1,100,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item3">
+                                <!-- Item 7 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/CherryDoUc.jpg"
+                                            alt="Cherry Uc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Cherry Đỏ Úc 3
+                                        </h3>
+                                        <p class="desc">
+                                            Cheery Úc là loại trái cây cung cấp
+                                            nhiều vitamin, các khoáng chất thiết
+                                            yếu cho cơ thể. Chính vì sự "Đắt đỏ"
+                                            ấy mà cherry được ví là "kim cương
+                                            của các loại hoa quả". Chúng giàu
+                                            chất xơ nên tốt cho tiêu hóa.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">690,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/ChaLaNamPhi.jpg"
+                                            alt="Chà là tươi Nam Phi"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Chà là tươi Nam Phi 3
+                                        </h3>
+                                        <p class="desc">
+                                            Chà là tươi Nam Phi có đặc tính trái
+                                            còn sống thì có vị chát nhẹ của vỏ
+                                            nhưng ăn quen 1 lúc thì không còn
+                                            cảm giác chát nữa và giòn ngọt
+                                            thanh, khi trái chín 1 chút sẽ
+                                            chuyển qua giòn nhẹ và ngọt đậm hơn,
+                                            ăn dẻo và ngọt.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">520,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/TaoMatVangNhat.jpg"
+                                            alt="Táo đỏ sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Táo đỏ sấy khô 3
+                                        </h3>
+                                        <p class="desc">
+                                            Táo mật vàng IWATE JUNJO Nhật Bản là
+                                            giống táo quý hiếm cực kì khó trồng
+                                            và độc đáo bậc nhất thế giới. Vỏ rất
+                                            mỏng rất nhiều nước. Là món quà tặng
+                                            cao cấp sang trọng trong văn hóa
+                                            Nhật Bản.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price"
+                                                >1,100,000đ</span
+                                            >
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +721,8 @@
                             <span class="dot"></span>
                         </div>
                     </div>
-                    <div class="fruit-list">
+                    <!-- Trái cây đặc sản -->
+                    <div class="fruit-item specialty-fruits">
                         <div class="content-top">
                             <div class="info">
                                 <h1 class="title">Trái cây đặc sản</h1>
@@ -353,7 +732,7 @@
                                 </p>
                             </div>
                             <div class="active-icon">
-                                <button class="control-btn">
+                                <button class="control-btn prev-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -369,7 +748,7 @@
                                         />
                                     </svg>
                                 </button>
-                                <button class="control-btn">
+                                <button class="control-btn next-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -388,77 +767,250 @@
                             </div>
                         </div>
                         <div class="fruits">
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/vaithieu.jpg"
-                                        alt="Nho Hàn Quốc"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">
-                                        Vải thiều Lục Ngạn
-                                    </h3>
-                                    <p class="desc">
-                                        Quả nhỏ, vỏ sần, chín màu đỏ, hạt rất
-                                        nhỏ màu đen tuyền hoặc không hạt, cùi
-                                        trắng dày ăn rất ngọt, hương vị thơm đặc
-                                        biệt.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">100,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item1">
+                                <!-- Item 1 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/vaithieu.jpg"
+                                            alt="Nho Hàn Quốc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Vải thiều Lục Ngạn
+                                        </h3>
+                                        <p class="desc">
+                                            Quả nhỏ, vỏ sần, chín màu đỏ, hạt
+                                            rất nhỏ màu đen tuyền hoặc không
+                                            hạt, cùi trắng dày ăn rất ngọt,
+                                            hương vị thơm đặc biệt.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">100,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/vusualoren.jpg"
+                                            alt="Táo Mỹ"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">Vú Sữa Lò Rèn</h3>
+                                        <p class="desc">
+                                            Quả vú sữa rất to và tròn. Vỏ trái
+                                            vú sữa có màu xanh lục nhạt, rất
+                                            bóng.Thịt bên trong rất thơm, mềm
+                                            dịu và có vị ngọt lịm thanh mát
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">140,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/duasaptravinh.jpg"
+                                            alt="Dưa Lưới Nhật"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Dừa sáp Trà Vinh
+                                        </h3>
+                                        <p class="desc">
+                                            Dừa sáp có thể ăn trực tiếp hoặc xay
+                                            sinh tố, làm kem, làm chè. Dừa sáp
+                                            béo ngậy, ăn mềm mềm dài dài vô cùng
+                                            vui miệng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">100,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/vusualoren.jpg"
-                                        alt="Táo Mỹ"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">Vú Sữa Lò Rèn</h3>
-                                    <p class="desc">
-                                        Quả vú sữa rất to và tròn. Vỏ trái vú
-                                        sữa có màu xanh lục nhạt, rất bóng.Thịt
-                                        bên trong rất thơm, mềm dịu và có vị
-                                        ngọt lịm thanh mát
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">140,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item2">
+                                <!-- Item 4 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/vaithieu.jpg"
+                                            alt="Nho Hàn Quốc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Vải thiều Lục Ngạn 2
+                                        </h3>
+                                        <p class="desc">
+                                            Quả nhỏ, vỏ sần, chín màu đỏ, hạt
+                                            rất nhỏ màu đen tuyền hoặc không
+                                            hạt, cùi trắng dày ăn rất ngọt,
+                                            hương vị thơm đặc biệt.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">100,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/vusualoren.jpg"
+                                            alt="Táo Mỹ"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Vú Sữa Lò Rèn 2
+                                        </h3>
+                                        <p class="desc">
+                                            Quả vú sữa rất to và tròn. Vỏ trái
+                                            vú sữa có màu xanh lục nhạt, rất
+                                            bóng.Thịt bên trong rất thơm, mềm
+                                            dịu và có vị ngọt lịm thanh mát
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">140,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/duasaptravinh.jpg"
+                                            alt="Dưa Lưới Nhật"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Dừa sáp Trà Vinh 2
+                                        </h3>
+                                        <p class="desc">
+                                            Dừa sáp có thể ăn trực tiếp hoặc xay
+                                            sinh tố, làm kem, làm chè. Dừa sáp
+                                            béo ngậy, ăn mềm mềm dài dài vô cùng
+                                            vui miệng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">100,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/duasaptravinh.jpg"
-                                        alt="Dưa Lưới Nhật"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">Dừa sáp Trà Vinh</h3>
-                                    <p class="desc">
-                                        Dừa sáp có thể ăn trực tiếp hoặc xay
-                                        sinh tố, làm kem, làm chè. Dừa sáp béo
-                                        ngậy, ăn mềm mềm dài dài vô cùng vui
-                                        miệng.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">100,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item3">
+                                <!-- Item 7 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/vaithieu.jpg"
+                                            alt="Nho Hàn Quốc"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Vải thiều Lục Ngạn 3
+                                        </h3>
+                                        <p class="desc">
+                                            Quả nhỏ, vỏ sần, chín màu đỏ, hạt
+                                            rất nhỏ màu đen tuyền hoặc không
+                                            hạt, cùi trắng dày ăn rất ngọt,
+                                            hương vị thơm đặc biệt.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">100,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/vusualoren.jpg"
+                                            alt="Táo Mỹ"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Vú Sữa Lò Rèn 3
+                                        </h3>
+                                        <p class="desc">
+                                            Quả vú sữa rất to và tròn. Vỏ trái
+                                            vú sữa có màu xanh lục nhạt, rất
+                                            bóng.Thịt bên trong rất thơm, mềm
+                                            dịu và có vị ngọt lịm thanh mát
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">140,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/duasaptravinh.jpg"
+                                            alt="Dưa Lưới Nhật"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Dừa sáp Trà Vinh 3
+                                        </h3>
+                                        <p class="desc">
+                                            Dừa sáp có thể ăn trực tiếp hoặc xay
+                                            sinh tố, làm kem, làm chè. Dừa sáp
+                                            béo ngậy, ăn mềm mềm dài dài vô cùng
+                                            vui miệng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">100,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -469,19 +1021,19 @@
                             <span class="dot"></span>
                         </div>
                     </div>
-                    <div class="fruit-list">
+                    <!-- Trái cây xấy khô -->
+                    <div class="fruit-item dry-fruits">
                         <div class="content-top">
                             <div class="info">
                                 <h1 class="title">Trái cây sấy khô</h1>
                                 <p class="desc">
-                                    Các loại trái cây sấy khô đã được trải qua quá trình 
-                                    chế biến, sấy, đóng hộp. Đảm bảo an toàn chất lượng cho
-                                    người tiêu dùng
-
+                                    Các loại trái cây sấy khô đã được trải qua
+                                    quá trình chế biến, sấy, đóng hộp. Đảm bảo
+                                    an toàn chất lượng cho người tiêu dùng
                                 </p>
                             </div>
                             <div class="active-icon">
-                                <button class="control-btn">
+                                <button class="control-btn prev-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -497,7 +1049,7 @@
                                         />
                                     </svg>
                                 </button>
-                                <button class="control-btn">
+                                <button class="control-btn next-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -516,78 +1068,252 @@
                             </div>
                         </div>
                         <div class="fruits">
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/SungSayKho.jpg"
-                                        alt="Sung loại 1 sấy khô"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">Sung loại 1 sấy khô</h3>
-                                    <p class="desc">
-                                        Được chế biến từ quả sung chín, thơm 
-                                        ngon, bổ dưỡng dành cho mọi người. Mọi quy 
-                                        trình chế biến đều đảm bảo chất lượng.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">160,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item1">
+                                <!-- Item 1 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/SungSayKho.jpg"
+                                            alt="Sung loại 1 sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Sung loại 1 sấy khô
+                                        </h3>
+                                        <p class="desc">
+                                            Được chế biến từ quả sung chín, thơm
+                                            ngon, bổ dưỡng dành cho mọi người.
+                                            Mọi quy trình chế biến đều đảm bảo
+                                            chất lượng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">160,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/NhoDenSayKho.jpg"
+                                            alt="Nho đen sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Nho đen sấy khô
+                                        </h3>
+                                        <p class="desc">
+                                            Nho đen sấy khô là thực phẩm được
+                                            chế biến từ quả nho nguyên chất được
+                                            tuyển chọn. Sản phẩm thơm ngon, giòn
+                                            tan, ngọt dịu.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">99,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/TaoDoKho.jpg"
+                                            alt="Táo đỏ sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Táo đỏ sấy khô
+                                        </h3>
+                                        <p class="desc">
+                                            Là sản phẩm giàu chất dinh dưỡng
+                                            được chế biến từ Táo đỏ tuyển chọn.
+                                            Bổ dưỡng, giàu vitimin và có ích cho
+                                            sức khỏe.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">220,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/NhoDenSayKho.jpg"
-                                        alt="Nho đen sấy khô"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">
-                                        Nho đen sấy khô
-                                    </h3>
-                                    <p class="desc">
-                                        Nho đen sấy khô là thực phẩm được
-                                        chế biến từ quả nho nguyên chất
-                                        được tuyển chọn. Sản phẩm thơm ngon,
-                                        giòn tan, ngọt dịu.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">99,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item2">
+                                <!-- Item 4 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/SungSayKho.jpg"
+                                            alt="Sung loại 1 sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Sung loại 1 sấy khô 2
+                                        </h3>
+                                        <p class="desc">
+                                            Được chế biến từ quả sung chín, thơm
+                                            ngon, bổ dưỡng dành cho mọi người.
+                                            Mọi quy trình chế biến đều đảm bảo
+                                            chất lượng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">160,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/NhoDenSayKho.jpg"
+                                            alt="Nho đen sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Nho đen sấy khô 2
+                                        </h3>
+                                        <p class="desc">
+                                            Nho đen sấy khô là thực phẩm được
+                                            chế biến từ quả nho nguyên chất được
+                                            tuyển chọn. Sản phẩm thơm ngon, giòn
+                                            tan, ngọt dịu.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">99,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/TaoDoKho.jpg"
+                                            alt="Táo đỏ sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Táo đỏ sấy khô 2
+                                        </h3>
+                                        <p class="desc">
+                                            Là sản phẩm giàu chất dinh dưỡng
+                                            được chế biến từ Táo đỏ tuyển chọn.
+                                            Bổ dưỡng, giàu vitimin và có ích cho
+                                            sức khỏe.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">220,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <a href="#!">
-                                    <img
-                                        src="assets/img/content-img/TaoDoKho.jpg"
-                                        alt="Táo đỏ sấy khô"
-                                        class="thumb"
-                                    />
-                                </a>
-                                <div class="fruit-info">
-                                    <h3 class="sub-title">
-                                        Táo đỏ sấy khô
-                                    </h3>
-                                    <p class="desc">
-                                        Là sản phẩm giàu chất dinh dưỡng
-                                        được chế biến từ Táo đỏ tuyển chọn.
-                                        Bổ dưỡng, giàu vitimin và có ích cho 
-                                        sức khỏe.
-                                    </p>
-                                    <div class="purchasing">
-                                        <span class="price">220,000đ</span>
-                                        <a href="#!" class="btn">
-                                            Thêm vào giỏ hàng
-                                        </a>
+                            <div class="group group-item3">
+                                <!-- Item 7 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/SungSayKho.jpg"
+                                            alt="Sung loại 1 sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Sung loại 1 sấy khô 3
+                                        </h3>
+                                        <p class="desc">
+                                            Được chế biến từ quả sung chín, thơm
+                                            ngon, bổ dưỡng dành cho mọi người.
+                                            Mọi quy trình chế biến đều đảm bảo
+                                            chất lượng.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">160,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/NhoDenSayKho.jpg"
+                                            alt="Nho đen sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Nho đen sấy khô 3
+                                        </h3>
+                                        <p class="desc">
+                                            Nho đen sấy khô là thực phẩm được
+                                            chế biến từ quả nho nguyên chất được
+                                            tuyển chọn. Sản phẩm thơm ngon, giòn
+                                            tan, ngọt dịu.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">99,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="item">
+                                    <a href="#!">
+                                        <img
+                                            src="assets/img/content-img/TaoDoKho.jpg"
+                                            alt="Táo đỏ sấy khô"
+                                            class="thumb"
+                                        />
+                                    </a>
+                                    <div class="fruit-info">
+                                        <h3 class="sub-title">
+                                            Táo đỏ sấy khô 3
+                                        </h3>
+                                        <p class="desc">
+                                            Là sản phẩm giàu chất dinh dưỡng
+                                            được chế biến từ Táo đỏ tuyển chọn.
+                                            Bổ dưỡng, giàu vitamin và có ích cho
+                                            sức khỏe.
+                                        </p>
+                                        <div class="purchasing">
+                                            <span class="price">220,000đ</span>
+                                            <a href="#!" class="btn">
+                                                Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -688,5 +1414,6 @@
                 </div>
             </div>
         </div>
+        <script src="./assets/JS/main.js"></script>
     </body>
 </html>
