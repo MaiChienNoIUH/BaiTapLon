@@ -1,11 +1,89 @@
 /* PC */
 @media (min-width: 1024px){
-
+    .main-content
+    {
+        width: 1170px;
+    }
 }
 
 /* Tablet */
 @media ((min-width: 740px) and (max-width: 1023px)){
-   
+    .main-content
+    {
+        width: 740px;
+    }
+
+    #header img{
+        margin-right: 10px;
+    }
+
+    .nav{
+        gap: 8px;
+    }
+
+    #header .search-btn input{
+        width: 120px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    #header .search-btn .search-icon{
+        margin-right: 5px;
+    }
+
+    #header .search-btn{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    #header .action-btn {
+        gap:10px
+    }
+
+    .fruit-info .purchasing{
+        display: block;
+    }
+
+    .fruit-info .purchasing .price {
+        font-weight: 700;
+        color: #ffb900;
+        margin-bottom: 8px;
+        display: block;
+    }
+    
+    .fruit-info .purchasing .btn {
+        min-width: 40px;
+        display: block;
+    }
+
+    #footer .container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Content .group{
+        display: flex;
+        width: 100%;
+        gap:15px;
+    }
+
+    #Content .fruits .item{
+        width: calc((100% / 3) - 10px);
+    }
+
+    .footer-list-info .contact,
+    .footer-list-info .introduce,
+    .footer-list-info .service,
+    .footer-list-info .attribute 
+    {
+        width: 100%;
+    }
+
+    #footer .top-contact{
+        margin-top: 50px;
+    }
 }
 
 /* Mobile */
@@ -15,8 +93,8 @@
         width: 340px;
     }
 
-    .header{
-        width: 100%;
+    #header img{
+        margin-right: 10px;
     }
 
     .nav > li > a,
@@ -26,19 +104,29 @@
         display: none;
     }
 
+    /* #header .action-btn .btn{
+        margin-right: 10px;
+    } */
+
     #slider{
         width: 100%;
     }
 
-    /* #content{
-        width: 100%;
-    } */
 
-    #Content .fruits{
+    #Content .fruits .group{
         display: block;
+        width: 100%;
     }
 
-    #Content .fruits .item{
+    #Content .fruits .group-item1 .item,
+    #Content .fruits .group-item2 .item,
+    #Content .fruits .group-item3 .item
+    {
+        margin-top: 2px;
+        width: 100%;
+    }
+
+    #Content .animation{
         width: 100%;
     }
 
