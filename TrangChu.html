@@ -5,103 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Happy Fruit</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="icon" href="assets/img/face-icon/logo3.jpg">
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="icon" href="assets/img/face-icon/logo3.jpg" />
 
         <link
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
             href="assets/font/themify-icons/themify-icons.css"
-        />  
+        />
 
-        <script>
-            function kiemTraHoTen(){
-            var re = /^([A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]+))+$/;
-            if(re.test(document.getElementById("txtHoTen").value)==false){
-                tbTen.innerText = "*Bắt buộc nhập ít nhất 2 từ, bắt đầu bằng kí tự in hoa";
-                return false;
-            }
-            else
-            {
-                tbTen.innerText = "*";
-                return true;
-                }
-            }
-
-            function kiemTraEmail(){
-                var mauKt = /^([a-zA-Z]{1})([a-zA-Z0-9-_])*(@gmail.com){1}$/;
-                if(mauKt.test(document.getElementById("txtEmail").value)==false){
-                    tbEmail.innerText = "*Ký tự đầu là chữ cái, kết thúc bằng @gmail.com!!";
-                    return false;
-                }
-                else
-                {
-                    tbEmail.innerText = "*";
-                    return true;
-                }
-            }
-
-            function kiemTraNgaySinh(){
-                var ns =new Date(document.getElementById('txtNgaySinh').value);
-                var today = new Date();
-                if(eval(today.getFullYear() - ns.getFullYear() <= 10)){
-                    tbNgaySinh.innerText = "Tuổi phải lớn hơn 10";
-                    return false;
-                }
-                else{
-                    tbNgaySinh.innerText = "*";
-                    return true;
-                }
-            }
-
-            function kiemTraSoDienThoai(){
-                var mauKt = /[0-9]{8,15}$/;
-                if(mauKt.test(document.getElementById("txtSDT").value) == false){
-                    tbSoDt.innerText = "Số điện thoại phải từ 8-15 số !!";
-                    return false;
-                }
-                else
-                {
-                    tbSoDt.innerText = "*";
-                    return true;
-                }
-            }
-
-            function kiemTraPassWord(){
-                var re = /(?=.*\d).{6,}/;
-                if(re.test(document.getElementById('txtMatKhau').value) == false){
-                    mk.innerText = "*Phải có chữ, số, ít nhất 6 ký tự";
-                    return false;
-                }
-                else{
-                    mk.innerText = "*";
-                    return true;
-                }
-            }
-
-            function kiemTraXacNhanMatKhau(){
-                if(document.getElementById('txtMatKhau').value != document.getElementById('txtNhapLaiMatKhau').value){
-                    nlmk.innerText = "*Phải giống với mật khẩu vừa nhập!";
-                    return false;
-                }
-                else{
-                    nlmk.innerText = "*";
-                    return true;
-                }
-            }
-
-            function submitForm(){
-                if(kiemTraHoTen()==false || kiemTraEmail()==false || kiemTraSoDienThoai()==false || 
-                kiemTraNgaySinh()==false || kiemTraPassWord()==false || kiemTraXacNhanMatKhau == false){
-                    alert('Bạn chưa nhập đầy đủ thông tin!');
-                    return false;
-                }
-                else{
-                    alert("Đăng ký thành công!!");
-                    $("#mymodal").modal("hide");
-                }
-            }
-        </script>
+        <script></script>
     </head>
     <body>
         <div id="main">
@@ -146,7 +66,7 @@
 
                         <div class="search-btn">
                             <input
-                                type="text"
+                                type="search"
                                 name="txtSearch"
                                 id=""
                                 placeholder="Tìm kiếm"
@@ -158,6 +78,30 @@
                         <div class="action-btn">
                             <a href="#" class="login-btn SignIn">Sign In</a>
                             <a href="#" class="btn SignUp">Sign Up</a>
+                        </div>
+                        <div class="account-group">
+                            <i class="ti-shopping-cart"></i>
+                            <div class="account">
+                                <img
+                                    src="./assets/img/account-avatar.png"
+                                    alt="Avatar"
+                                    class="avatar"
+                                />
+                                <span class="username">Võ Đình Thông</span>
+                                <ul class="account-feature">
+                                    <li>
+                                        <a href="#!">Tài Khoản Của Tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Đơn Mua</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="btnLogout">
+                                            Đăng Xuất
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,9 +154,7 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Nho Hàn Quốc
-                                        </h3>
+                                        <h3 class="sub-title">Nho Hàn Quốc</h3>
                                         <p class="desc">
                                             Nho với trái to tròn, vỏ bóng mịn có
                                             màu xanh hổ phách không bị chát, vị
@@ -221,7 +163,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">900,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -241,12 +186,15 @@
                                         <p class="desc">
                                             (Táo Xanh Mỹ) có nguồn gốc từ Úc du
                                             nhập vào Mỹ năm 1868. Táo có màu
-                                            xanh lá, vị chua đậm, rất giòn, căng mịn, 
-                                            nhiều nước.
+                                            xanh lá, vị chua đậm, rất giòn, căng
+                                            mịn, nhiều nước.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">140,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -268,12 +216,15 @@
                                         <p class="desc">
                                             Dưa lưới Nhật Bản hình tròn hoặc
                                             dài, da màu xanh, khi chín thì ngả
-                                            vàng, căng mịn và thịt dưa lưới màu 
+                                            vàng, căng mịn và thịt dưa lưới màu
                                             vàng cam hoặc vàng đỏ.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">500,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -296,12 +247,16 @@
                                         </h3>
                                         <p class="desc">
                                             Nho với trái to tròn, vỏ bóng mịn và
-                                            đặc biệt có màu đỏ đặc trưng, quý hiếm. Vị
-                                            ngọt đậm, ăn giòn với hương thơm rất đặc trưng.
+                                            đặc biệt có màu đỏ đặc trưng, quý
+                                            hiếm. Vị ngọt đậm, ăn giòn với hương
+                                            thơm rất đặc trưng.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">110,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -320,13 +275,16 @@
                                         <h3 class="sub-title">Táo Rockit Mỹ</h3>
                                         <p class="desc">
                                             Táo Rockit Mỹ là loại đặc trưng,
-                                            không bị lẫn so với những loại táo khác.
-                                            Táo có màu đỏ vàng, vị chua đậm và rất giòn,
-                                            nhiều nước.
+                                            không bị lẫn so với những loại táo
+                                            khác. Táo có màu đỏ vàng, vị chua
+                                            đậm và rất giòn, nhiều nước.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">163,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -347,12 +305,16 @@
                                         </h3>
                                         <p class="desc">
                                             Việt Quất Newzealand xuất sứ từ nước
-                                            Úc, khi chính quả có bóng tròn, căng mịn,
-                                            vỏ có màu tím đặc trưng và rất mỏng.
+                                            Úc, khi chính quả có bóng tròn, căng
+                                            mịn, vỏ có màu tím đặc trưng và rất
+                                            mỏng.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">140,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -370,18 +332,19 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Dâu Tây Hàn
-                                        </h3>
+                                        <h3 class="sub-title">Dâu Tây Hàn</h3>
                                         <p class="desc">
                                             Dâu Tây Hàn có xuất sứ từ Hàn Quốc.
-                                            Loại dâu này rất đặc trưng ở Hàn quốc, 
-                                            khi chín thường ăn rất vừa miệng, ngọt 
-                                            dịu pha chút vị chua.
+                                            Loại dâu này rất đặc trưng ở Hàn
+                                            quốc, khi chín ăn rất vừa miệng,
+                                            ngọt dịu pha chút vị chua.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">329,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -399,13 +362,17 @@
                                     <div class="fruit-info">
                                         <h3 class="sub-title">Dưa lưới Taki</h3>
                                         <p class="desc">
-                                            Dưa lưới Taki là loại trái cây nhập khẩu
-                                            được tiêu dùng rộng rãi bởi người Việt. Quả
-                                            khi chín to tròn, ăn béo ngọt và tốt cho sức khỏe.
+                                            Dưa lưới Taki là loại trái cây nhập
+                                            khẩu được tiêu dùng rộng rãi bởi
+                                            người Việt. Quả khi chín to tròn, ăn
+                                            béo ngọt và tốt cho sức khỏe.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">83,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -425,13 +392,17 @@
                                             Sầu Riêng MusangKinh
                                         </h3>
                                         <p class="desc">
-                                            Sầu Riêng MusangKinh Malaysia là loại sầu 
-                                            riêng cao cấp dùng để xuất khẩu, loại này 
-                                            đặc biệt ngon, múi dày hơn  các loại khác.
+                                            Sầu Riêng MusangKinh Malaysia là
+                                            loại sầu riêng cao cấp dùng để xuất
+                                            khẩu, loại này đặc biệt ngon, múi
+                                            dày hơn các loại khác.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">870,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -516,7 +487,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">690,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -539,13 +513,16 @@
                                             Chà là tươi Nam Phi có đặc tính trái
                                             còn sống thì có vị chát nhẹ của vỏ
                                             nhưng ăn quen 1 lúc thì không còn
-                                            cảm giác chát nữa và giòn ngọt thanh, 
-                                            trái chín chuyển qua giòn nhẹ 
+                                            cảm giác chát nữa và giòn ngọt
+                                            thanh, trái chín chuyển qua giòn nhẹ
                                             và ngọt đậm hơn, ăn dẻo và ngọt.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">520,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -561,22 +538,23 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Táo mật vàng
-                                        </h3>
+                                        <h3 class="sub-title">Táo mật vàng</h3>
                                         <p class="desc">
                                             Táo mật vàng IWATE JUNJO Nhật Bản là
                                             giống táo quý hiếm cực kì khó trồng
                                             và độc đáo bậc nhất thế giới. Vỏ rất
-                                            mỏng chứa rất nhiều nước. Là món quà 
-                                            tặng cao cấp sang trọng trong văn hóa
-                                            Nhật Bản.
+                                            mỏng chứa rất nhiều nước. Là món quà
+                                            tặng cao cấp sang trọng trong văn
+                                            hóa Nhật Bản.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price"
                                                 >1,100,000đ</span
                                             >
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -599,15 +577,16 @@
                                         </h3>
                                         <p class="desc">
                                             Lê Sữa Hàn Quốc được trồng nhiều tại
-                                            Hàn quốc, loại lê này giàu chất dinh dưỡng
-                                            và hương vị vô cùng đặc biệt, trái chín có vỏ mềm 
-                                            và xốp.
+                                            Hàn quốc, loại lê này giàu chất dinh
+                                            dưỡng và hương vị vô cùng đặc biệt,
+                                            trái chín có vỏ mềm và xốp.
                                         </p>
                                         <div class="purchasing">
-                                            <span class="price"
-                                                >210,000đ</span
+                                            <span class="price">210,000đ</span>
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
                                             >
-                                            <a href="ChiTietSanPham.html" class="btn">
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -628,13 +607,16 @@
                                         </h3>
                                         <p class="desc">
                                             Táo Breeze Newzealand có xuất xứ từ
-                                            Newzealand, là loại cây cực kỳ khó trồng
-                                            và quý hiếm ở đất nước này. Trái chín ăn 
-                                            rất ngon
+                                            Newzealand, là loại cây cực kỳ khó
+                                            trồng và quý hiếm ở đất nước này.
+                                            Trái chín ăn rất ngon
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">459,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -654,16 +636,17 @@
                                             Cam Cara Ruột Đỏ
                                         </h3>
                                         <p class="desc">
-                                            Cam Cara Ruột Đỏ là loại trái cây
-                                            vô cùng bổ dưỡng, chứa nhiều vitamin A, C,
-                                            D++, cá nguyên tố vi lượng: Sắt, kẽm...
-                                            rất tốt cho sức khỏe.
+                                            Cam Cara Ruột Đỏ là loại trái cây vô
+                                            cùng bổ dưỡng, chứa nhiều vitamin A,
+                                            C, D++, cá nguyên tố vi lượng: Sắt,
+                                            kẽm... rất tốt cho sức khỏe.
                                         </p>
                                         <div class="purchasing">
-                                            <span class="price"
-                                                >319,000đ</span
+                                            <span class="price">319,000đ</span>
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
                                             >
-                                            <a href="ChiTietSanPham.html" class="btn">
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -681,18 +664,20 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Lê Nam Phi
-                                        </h3>
+                                        <h3 class="sub-title">Lê Nam Phi</h3>
                                         <p class="desc">
-                                            Lê Nam Phi có xuất xứ từ vùng đất Nam Phi
-                                            với với nhiều trái cây đa dạng. Loại lê này
-                                            đặc biệt so với những loại khác là ăn rất giòn, xốp và
-                                            cực kỳ ngon.
+                                            Lê Nam Phi có xuất xứ từ vùng đất
+                                            Nam Phi với với nhiều trái cây đa
+                                            dạng. Loại lê này đặc biệt so với
+                                            những loại khác là ăn rất giòn, xốp
+                                            và cực kỳ ngon.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">175,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -712,14 +697,18 @@
                                             Táo túi Nam Phi
                                         </h3>
                                         <p class="desc">
-                                            Táo túi Nam Phi có hương vị giòn, ngọt
-                                            thanh, khi trái chín 1 chút sẽ
+                                            Táo túi Nam Phi có hương vị giòn,
+                                            ngọt thanh, khi trái chín 1 chút sẽ
                                             chuyển qua giòn nhẹ và ngọt đậm hơn,
-                                            ăn có vị xốp và ngọt, có ít cho sức khỏe 
+                                            ăn có vị xốp và ngọt, có ít cho sức
+                                            khỏe
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">321,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -735,18 +724,20 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Kiwi Vàng Ý
-                                        </h3>
+                                        <h3 class="sub-title">Kiwi Vàng Ý</h3>
                                         <p class="desc">
-                                            Kiwi Vàng Ý là loại trái cây được nhập
-                                            khẩu từ nước ý, thơm ngon, bổ dưỡng, cung
-                                            cấp nhiều chất dinh dưỡng, tạo sức đề kháng
-                                            tốt cho sức khỏe.
+                                            Kiwi Vàng Ý là loại trái cây được
+                                            nhập khẩu từ nước ý, thơm ngon, bổ
+                                            dưỡng, cung cấp nhiều chất dinh
+                                            dưỡng, tạo sức đề kháng tốt cho sức
+                                            khỏe.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">280,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -830,7 +821,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">100,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -855,7 +849,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">140,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -876,13 +873,16 @@
                                         </h3>
                                         <p class="desc">
                                             Dừa sáp có thể ăn trực tiếp hoặc xay
-                                            sinh tố, làm kem, làm chè,... Dừa sáp
-                                            béo ngậy, ăn mềm mềm dai dai vô cùng
-                                            ngon miệng.
+                                            sinh tố, làm kem, làm chè,... Dừa
+                                            sáp béo ngậy, ăn mềm mềm dai dai vô
+                                            cùng ngon miệng.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">100,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -900,17 +900,19 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Bơ sáp
-                                        </h3>
+                                        <h3 class="sub-title">Bơ sáp</h3>
                                         <p class="desc">
-                                            Bơ sáp là loại bơ được trồng 
-                                            nhiều tại Việt Nam. Quả có vỏ dày và
-                                            hình dáng xuôn dài, thịt nhiều và béo ngậy.
+                                            Bơ sáp là loại bơ được trồng nhiều
+                                            tại Việt Nam. Quả có vỏ dày và hình
+                                            dáng xuôn dài, thịt nhiều và béo
+                                            ngậy.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">29,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -926,17 +928,18 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Mảng cầu xiêm
-                                        </h3>
+                                        <h3 class="sub-title">Mảng cầu xiêm</h3>
                                         <p class="desc">
-                                            Mảng cầu xiêm là loại mảng cầu
-                                            to, dài, vỏ sần sùi có gai nhọn
-                                            nhưng ăn rất ngon, thích hợp làm sinh tố.
+                                            Mảng cầu xiêm là loại mảng cầu to,
+                                            dài, vỏ sần sùi có gai nhọn nhưng ăn
+                                            rất ngon, thích hợp làm sinh tố.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">40,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -957,12 +960,16 @@
                                         </h3>
                                         <p class="desc">
                                             Thanh Long ruột đỏ là giống thanh
-                                            long mới có xuất sứ từ Ninh Thuận, có 
-                                            vị đậm, ngon ngọt hơn so với thanh long thường.
+                                            long mới có xuất sứ từ Ninh Thuận,
+                                            có vị đậm, ngon ngọt hơn so với
+                                            thanh long thường.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">15,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -980,17 +987,18 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Mít Tố Nữ
-                                        </h3>
+                                        <h3 class="sub-title">Mít Tố Nữ</h3>
                                         <p class="desc">
-                                            Mít Tố Nữ có kích cỡ quả nhỏ, mềm. 
+                                            Mít Tố Nữ có kích cỡ quả nhỏ, mềm.
                                             Múi mềm, dễ tách, ăn có vị rất ngọt,
                                             thơm ngon, bổ dưỡng, nhiều vitamin
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">50,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1010,13 +1018,17 @@
                                             Dưa hấu Long An
                                         </h3>
                                         <p class="desc">
-                                            Dưa hấu Long An được trồng nhiều
-                                            ở Long An, quả tròn, dài và khi chín
-                                            thì ăn rất ngọt, thơm ngon, giàu vitamin.
+                                            Dưa hấu Long An được trồng nhiều ở
+                                            Long An, quả tròn, dài và khi chín
+                                            thì ăn rất ngọt, thơm ngon, giàu
+                                            vitamin.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">67,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1032,24 +1044,24 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Bưởi năm roi
-                                        </h3>
+                                        <h3 class="sub-title">Bưởi năm roi</h3>
                                         <p class="desc">
                                             Bưởi năm roi là loại bưởi đặc trưng.
-                                            Quả tròn, bóng mịn. Ăn rất ngọt chứ không
-                                            chua như những loại bưởi khác.
+                                            Quả tròn, bóng mịn. Ăn rất ngọt chứ
+                                            không chua như những loại bưởi khác.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">35,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
                         <div class="animation">
                             <div class="dots">
@@ -1128,7 +1140,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">160,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1155,7 +1170,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">99,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1182,7 +1200,10 @@
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">220,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1204,14 +1225,17 @@
                                             Mận sấy chanh muối
                                         </h3>
                                         <p class="desc">
-                                            Những quả mận được chọn lựa 
-                                            kỹ đưa vào sấy với nước cốt chanh 
-                                            muối cho ra những quả mứt mận đỏ đẹp mắt. 
-                                            Sản phẩm đóng lon đẹp như hình
+                                            Những quả mận được chọn lựa kỹ đưa
+                                            vào sấy với nước cốt chanh muối cho
+                                            ra những quả mứt mận đỏ đẹp mắt. Sản
+                                            phẩm đóng lon đẹp như hình
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">89,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1227,18 +1251,20 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Dâu sấy giòn
-                                        </h3>
+                                        <h3 class="sub-title">Dâu sấy giòn</h3>
                                         <p class="desc">
-                                            Dâu sấy giòn được đóng gói đẹp mắt, 
+                                            Dâu sấy giòn được đóng gói đẹp mắt,
                                             dâu được tuyển chọn để đưa vào sấy.
-                                            Dâu có hương vị thơm ngon, chua chua 
-                                            và hơi ngọt nhẹ, cung cấp nhiều vitamin.
+                                            Dâu có hương vị thơm ngon, chua chua
+                                            và hơi ngọt nhẹ, cung cấp nhiều
+                                            vitamin.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">99,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1258,13 +1284,18 @@
                                             Chà Là Khô Natural
                                         </h3>
                                         <p class="desc">
-                                            Chà là Natural delights có thành phần 100% chà là tự nhiên
-                                            Được thiết kế trong hộp nhựa gọn nhẹ. Có vị ngọt nhẹ, không 
-                                            cho thêm chất làm ngọt, bùi và mùi hương dịu nhẹ
+                                            Chà là Natural delights có thành
+                                            phần 100% chà là tự nhiên Được thiết
+                                            kế trong hộp nhựa gọn nhẹ. Có vị
+                                            ngọt nhẹ, không cho thêm chất làm
+                                            ngọt, bùi và mùi hương dịu nhẹ
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">299,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1286,14 +1317,18 @@
                                             Mơ Tây Sấy Dẻo
                                         </h3>
                                         <p class="desc">
-                                            Mơ sấy dẻo tự nhiên quả to, 
-                                            khô ráo, vị thơm ngon. Quả mơ chín có nhiều 
-                                            vitamin A, C và các nguyên tố vi lượng, trong 
-                                            100g trái mơ cung cấp đầy đủ lượng vitamin A cần thiết
+                                            Mơ sấy dẻo tự nhiên quả to, khô ráo,
+                                            vị thơm ngon. Quả mơ chín có nhiều
+                                            vitamin A, C và các nguyên tố vi
+                                            lượng, trong 100g trái mơ cung cấp
+                                            đầy đủ lượng vitamin A cần thiết
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">129,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1309,18 +1344,20 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Xoài Sấy Dẻo
-                                        </h3>
+                                        <h3 class="sub-title">Xoài Sấy Dẻo</h3>
                                         <p class="desc">
-                                            Xoài Sấy Dẻo là sản phẩm cô đặc các chất dinh 
-                                            dưỡng, màu sắc và hương vị của quả xoài tươi tự nhiên, 
-                                            tạo nên sản phẩm thơm ngon, tiện lợi cho 
+                                            Xoài Sấy Dẻo là sản phẩm cô đặc các
+                                            chất dinh dưỡng, màu sắc và hương vị
+                                            của quả xoài tươi tự nhiên, tạo nên
+                                            sản phẩm thơm ngon, tiện lợi cho
                                             người tiêu dùng.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">99,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1336,18 +1373,20 @@
                                         />
                                     </a>
                                     <div class="fruit-info">
-                                        <h3 class="sub-title">
-                                            Long Táo Sấy
-                                        </h3>
+                                        <h3 class="sub-title">Long Táo Sấy</h3>
                                         <p class="desc">
-                                            Được chế biến theo công thức riêng biệt.
-                                            Hương vị thơm ngon của trái táo xanh Ninh Thuận.
-                                            Táo xanh chứa nhiều vitamin A, C và các vi chất, vi
-                                            lượng tốt cho sức khỏe.
+                                            Được chế biến theo công thức riêng
+                                            biệt. Hương vị thơm ngon của trái
+                                            táo xanh Ninh Thuận. Táo xanh chứa
+                                            nhiều vitamin A, C và các vi chất,
+                                            vi lượng tốt cho sức khỏe.
                                         </p>
                                         <div class="purchasing">
                                             <span class="price">105,000đ</span>
-                                            <a href="ChiTietSanPham.html" class="btn">
+                                            <a
+                                                href="ChiTietSanPham.html"
+                                                class="btn"
+                                            >
                                                 Thêm vào giỏ hàng
                                             </a>
                                         </div>
@@ -1494,80 +1533,161 @@
                     <i class="ti-close"></i>
                 </div>
 
-                <div class="modal-header">
-                    THÔNG TIN CÁ NHÂN
-                </div>
-            
-                <div class="modal-body">
-                    <div class="item">
-                        <label for="txtHoTen" class="modal-label">Họ Tên:<br></label>
-                        <input id="txtHoTen" type="text" class="modal-input" onblur="kiemTraHoTen()" placeholder="Nhập họ tên">
-                        <br>
-                        <span id="tbTen">*</span>
-                    </div>
-                                
-    
-                    <div class="item">
-                        <label for="txtEmail" class="modal-label">Email:<br></label>
-                        <input id="txtEmail" type="text" class="modal-input" onblur="kiemTraEmail()" placeholder="xxx123@gmail.com">
-                        <br>
-                        <span id="tbEmail">*</span>
-                    </div>
-    
-                    <div class="item">
-                        <label for="txtNgaySinh" class="modal-label">Ngày sinh:<br></label>
-                        <input id="txtNgaySinh" type="date" class="modal-input" onblur="kiemTraNgaySinh()" placeholder="Ngày sinh">
-                        <br>
-                        <span id="tbNgaySinh">*</span>
-                    </div>                             
-        
-                    <div class="item">
-                        <label for="txtSDT" class="modal-label">Số điện thoại:<br></label>
-                        <input id="txtSDT" type="tel" class="modal-input" onblur="kiemTraSoDienThoai()" placeholder="Nhập số ĐT">
-                        <br>
-                        <span id="tbSoDt">*</span>
-                    </div>
-                    <br>
-        
-                    <div class="item">
-                        <label for="txtDiaChi" class="modal-label">Địa chỉ:<br></label>
-                        <input id="txtDiaChi" type="text" class="modal-input" placeholder="Nhập địa chỉ">
-                        <br>
-                        <span>*</span>
-                   </div>
+                <form class="signUp-form-container">
+                    <div class="modal-header">THÔNG TIN CÁ NHÂN</div>
 
-                    <div class="item">
-                        <label for="txtGioiTinh" class="modal-label">Giới tính: </label>
-                        <input id="txtGioiTinh1" type="radio" name="groupGioiTinh">
-                        <label for="txtGioiTinh1" class="modal-label">Nam</label>
-                        <input id="txtGioiTinh2" type="radio" name="groupGioiTinh">
-                        <label for="txtGioiTinh2" class="modal-label">Nữ</label>
-                        <br>
-                        <span>*</span>
+                    <div class="modal-body">
+                        <div class="modal-body__wrapper">
+                            <div class="item">
+                                <label for="txtHoTen" class="modal-label">
+                                    Họ Tên:
+                                </label>
+                                <br />
+                                <input
+                                    id="txtHoTen"
+                                    type="text"
+                                    class="modal-input"
+                                    onblur="kiemTraHoTen()"
+                                    placeholder="Nhập họ tên"
+                                />
+                                <br />
+                                <span id="tbTen">*</span>
+                            </div>
+
+                            <div class="item">
+                                <label for="txtEmail" class="modal-label">
+                                    Email:
+                                </label>
+                                <br />
+                                <input
+                                    id="txtEmail"
+                                    type="email"
+                                    class="modal-input"
+                                    onblur="kiemTraEmail()"
+                                    placeholder="xxx123@gmail.com"
+                                />
+                                <br />
+                                <span id="tbEmail">*</span>
+                            </div>
+                        </div>
+
+                        <div class="modal-body__wrapper">
+                            <div class="item">
+                                <label for="txtNgaySinh" class="modal-label"
+                                    >Ngày sinh:
+                                </label>
+                                <input
+                                    id="txtNgaySinh"
+                                    type="date"
+                                    class="modal-input"
+                                    onblur="kiemTraNgaySinh()"
+                                    placeholder="Ngày sinh"
+                                />
+                                <br />
+                                <span id="tbNgaySinh">*</span>
+                            </div>
+
+                            <div class="item">
+                                <label for="txtSDT" class="modal-label"
+                                    >Số điện thoại:<br
+                                /></label>
+                                <input
+                                    id="txtSDT"
+                                    type="tel"
+                                    class="modal-input"
+                                    onblur="kiemTraSoDienThoai()"
+                                    placeholder="Nhập số ĐT"
+                                />
+                                <br />
+                                <span id="tbSoDt">*</span>
+                            </div>
+                        </div>
+
+                        <div class="modal-body__wrapper">
+                            <div class="item">
+                                <label for="txtDiaChi" class="modal-label"
+                                    >Địa chỉ:<br
+                                /></label>
+                                <input
+                                    id="txtDiaChi"
+                                    type="text"
+                                    class="modal-input"
+                                    placeholder="Nhập địa chỉ"
+                                />
+                                <br />
+                                <span>*</span>
+                            </div>
+
+                            <div class="item" style="line-height: 82px">
+                                <label for="txtGioiTinh" class="modal-label"
+                                    >Giới tính:
+                                </label>
+                                <input
+                                    id="txtGioiTinh1"
+                                    type="radio"
+                                    name="groupGioiTinh"
+                                />
+                                <label for="txtGioiTinh1" class="modal-label"
+                                    >Nam</label
+                                >
+                                <input
+                                    id="txtGioiTinh2"
+                                    type="radio"
+                                    name="groupGioiTinh"
+                                />
+                                <label for="txtGioiTinh2" class="modal-label"
+                                    >Nữ</label
+                                >
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="modal-body__wrapper">
+                            <div class="item">
+                                <label for="txtMatKhau" class="modal-label"
+                                    >Mật khẩu:<br
+                                /></label>
+                                <input
+                                    id="txtMatKhau"
+                                    type="password"
+                                    class="modal-input"
+                                    onblur="kiemTraPassWord()"
+                                    placeholder="Nhập mật khẩu"
+                                />
+                                <br />
+                                <span id="mk">*</span>
+                            </div>
+
+                            <div class="item">
+                                <label
+                                    for="txtNhapLaiMatKhau"
+                                    class="modal-label"
+                                    >Nhập lại mật khẩu:<br
+                                /></label>
+                                <input
+                                    id="txtNhapLaiMatKhau"
+                                    type="password"
+                                    class="modal-input"
+                                    onblur="kiemTraXacNhanMatKhau()"
+                                    placeholder="Nhập lại mật khẩu"
+                                />
+                                <br />
+                                <span id="nlmk">*</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <br> -->
-        
-                    <div class="item">
-                        <label for="txtMatKhau" class="modal-label">Mật khẩu:<br></label>
-                        <input id="txtMatKhau" type="password" class="modal-input" onblur="kiemTraPassWord()" placeholder="Nhập mật khẩu">
-                         <br>
-                        <span id="mk">*</span>
-                    </div>
-        
-                    <div class="item">
-                        <label for="txtNhapLaiMatKhau" class="modal-label">Nhập lại mật khẩu:<br></label>
-                        <input id="txtNhapLaiMatKhau" type="password" class="modal-input" onblur="kiemTraXacNhanMatKhau()" placeholder="Nhập lại mật khẩu">
-                        <br>
-                        <span id="nlmk">*</span>
-                    </div>
-                </div>
-        
-                <footer class="modal-footer">
-                    <div class="item">
-                        <input type="submit" id="btnSave" onclick="submitForm()" value="Đăng ký">
-                        <input type="reset" value="Xóa">
-                    </div>
-                </footer>
+
+                    <footer class="modal-footer">
+                        <div class="item">
+                            <input type="submit" value="Đăng ký" />
+                            <input type="reset" value="Xóa" />
+                        </div>
+                        <div class="request">
+                            <span>Nếu đã tài khoản?</span>
+                            <a href="#" class="login-request">Đăng nhập</a>
+                        </div>
+                    </footer>
+                </form>
             </div>
         </div>
 
@@ -1577,51 +1697,68 @@
                     <i class="ti-close"></i>
                 </header>
 
-                <div class="modal-header">
-                    ĐĂNG NHẬP
-                </div>
-        
-                <div class="modal-body">                           
-                    <div class="item">
-                        <label for="txtEmail" class="modal-label">Email:<br></label>
-                        <input id="txtEmail" type="text" class="modal-input">
+                <form class="signIn-form-container">
+                    <div class="modal-header">ĐĂNG NHẬP</div>
+
+                    <div class="modal-body">
+                        <div class="item">
+                            <label for="txtEmail__login" class="modal-label"
+                                >Email:<br
+                            /></label>
+                            <input
+                                id="txtEmail__login"
+                                type="text"
+                                class="modal-input"
+                            />
+                        </div>
+                        <br />
+                        <div class="item">
+                            <label for="txtMatKhau__login" class="modal-label"
+                                >Mật khẩu:<br
+                            /></label>
+                            <input
+                                id="txtMatKhau__login"
+                                type="password"
+                                class="modal-input"
+                            />
+                        </div>
+                        <div class="item-SignIn">
+                            <input type="submit" value="Đăng nhập" />
+                        </div>
+                        <div class="contact-SignIn">
+                            <p>Hoặc đăng nhập bằng:</p>
+                            <ul class="icon-contact">
+                                <li>
+                                    <a href="#!">
+                                        <i class="ti-facebook"></i>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <i class="ti-instagram"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!"
+                                        ><i class="ti-twitter"></i>
+                                        Twitter
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <br>
-                    <div class="item">
-                        <label for="txtMatKhau" class="modal-label">Mật khẩu:<br></label>
-                        <input id="txtMatKhau" type="password" class="modal-input">  
-                    </div>
-                    <div class="item-SignIn">
-                        <input type="submit" id="btnSave" onclick="submitForm()" value="Đăng nhập">
-                    </div>
-                    <div class="contact-SignIn">
-                        <p>Hoặc tiếp tục bằng:</p>
-                        <ul class="icon-contact">
-                            <li>
-                                <a href="#!"
-                                    ><i class="ti-facebook"></i
-                                ></a>
-                            </li>
-                            <li>
-                                <a href="#!"
-                                    ><i class="ti-instagram"></i
-                                ></a>
-                            </li>
-                            <li>
-                                <a href="#!"
-                                    ><i class="ti-twitter"></i
-                                ></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                 <footer class="modal-footer">
-                    <label for="">Nếu chưa có tài khoản?  </label>
-                    <a href="#">Đăng nhập</a>
-                </footer>
+
+                    <footer class="modal-footer">
+                        <label for="">Nếu chưa có tài khoản? </label>
+                        <a href="#" class="register-request">Đăng kí</a>
+                    </footer>
+                </form>
             </div>
         </div>
+
+        <div id="toast"></div>
 
         <script src="./assets/js/main.js"></script>
     </body>
