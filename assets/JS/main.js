@@ -392,3 +392,42 @@ function showErrorSignInToast() {
         duration: 2000,
     });
 }
+
+
+//Xử lý xuất danh sách thông tin xuống table
+var stt = 1
+function dangKy(){
+    var ten = document.getElementById('txtHoTen').value;
+    var email = document.getElementById('txtEmail').value;
+    var ngaySinh = document.getElementById('txtNgaySinh').value;
+    var soDt = document.getElementById('txtSDT').value;
+    var diaChi = document.getElementById('txtDiaChi').value;
+
+    //Lấy giá trị cho giới tính
+    var gioiTinh
+    var checkbox = document.getElementsByName('groupGioiTinh');
+    for (var i = 0; i < checkbox.length; i++){
+        if (checkbox[i].checked === true){
+            gioiTinh = "Nữ";
+        }
+        else{
+            gioiTinh = "Nam";
+        }
+    }
+
+    var matKhau = document.getElementById('txtMatKhau').value;
+
+    if  (
+        kiemTraHoTen() && kiemTraEmail() && kiemTraSoDienThoai() &&
+        kiemTraNgaySinh() && kiemTraPassWord() && kiemTraXacNhanMatKhau() 
+    ) {
+        let trNew = "<tr><td>" + stt + "</td><td>" + ten + "</td><td>" + email + "</td><td>" + ngaySinh + "</td><td>" 
+            + soDt + "</td><td>" + diaChi + "</td><td>" + gioiTinh + "</td><td>" + matKhau + "</td></tr>";
+        
+        document.getElementById('tbl').innerHTML += trNew;
+        ++stt; 
+    }
+
+    // document.getElementById('test').innerHTML = gioiTinh;
+}
+

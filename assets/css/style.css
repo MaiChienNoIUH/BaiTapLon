@@ -268,6 +268,27 @@ ul {
     background: #e6f0ff;
 }
 
+/* Table */
+
+#Content .table table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f0f0f1;
+}
+
+#Content .table td,
+#Content .table th{
+    text-align: center;
+    border: 2px solid #fbfcfc;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#Content .table th{
+    background-color: #343a40;
+    color: #ffffff;
+}
+
 #Content .fruit-item {
     margin-top: 160px;
 }
