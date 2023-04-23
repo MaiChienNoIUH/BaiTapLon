@@ -1,488 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin trang Web</title>
-    <link rel="icon" href="../assets/img/face-icon/logo3.jpg" />
-    <link rel="stylesheet" href="../assets/font/themify-icons/themify-icons.css"/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Phản hồi</title>
+        <link rel="icon" href="../assets/img/face-icon/logo3.jpg" />
+        <link
+            rel="stylesheet"
+            href="../assets/font/themify-icons/themify-icons.css"
+        />
 
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <script src="../assets/js/jquery-3.6.4.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <script src="../assets/js/jquery-3.6.4.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../assets/css/customStylesBootstrap.css" />
+        <link rel="stylesheet" href="../assets/css/modal.css" />
+    </head>
+    <body>
+        <div class="container-fluid bg-light__blue pb-5">
+            <div class="container d-flex align-items-center">
+                <div class="col-md-1 col-xl-1">
+                    <a href="#!">
+                        <img
+                            src="../assets/img/logo_web/logo-main.png"
+                            alt="logo"
+                            width="80px"
+                            height="80px"
+                        />
+                    </a>
+                </div>
 
-    <script>
-        $(document).ready(function(){
-            $("#btnSignUp").click(function(){
-                $("#modal-SignUp").modal();
-            })
+                <div class="col-md-7 col-xl-7">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a
+                                    href="TrangChu.html"
+                                    class="nav-link text-gray__light"
+                                    >TRANG CHỦ</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="ThongTinTrangWeb.html"
+                                    class="nav-link text-gray__light"
+                                    >THÔNG TIN</a
+                                >
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover">
+                                <a
+                                    class="nav-link dropdown-toggle text-gray__light"
+                                    href="DanhMucSanPham.html"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    >DANH SÁCH SẢN PHẨM</a
+                                >
+                                <div
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown"
+                                    style="width: 230px"
+                                >
+                                    <a
+                                        class="dropdown-item"
+                                        href="DanhMucSanPham.html#TraiCayNhapKhau"
+                                        >Trái cây nhập khẩu</a
+                                    >
+                                    <a
+                                        class="dropdown-item"
+                                        href="DanhMucSanPham.html#TraiCayCaoCap"
+                                        >Trái cây cao cấp</a
+                                    >
+                                    <a
+                                        class="dropdown-item"
+                                        href="DanhMucSanPham.html#TraiCayDacSan"
+                                        >Trái cây đặc sản</a
+                                    >
+                                    <a
+                                        class="dropdown-item"
+                                        href="DanhMucSanPham.html#TraiCaySayKho"
+                                        >Trái cây sấy khô</a
+                                    >
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="PhanHoi.html"
+                                    class="nav-link text-gray__light"
+                                    >PHẢN HỒI</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-            $("#btnSignIn").click(function(){
-                $("#modal-SignIn").modal();
-            })
-
-            function kiemTraHoTen(){
-                var kt = /^([A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]+))*$/;
-                if($("#txtHoTen").val() == ""){
-                    $("#tbTen").html("Bắt buộc nhập !!");
-                    $("#tbTen").addClass("mauDo");
-                    return false;
-                }
-                if(!kt.test($("#txtHoTen").val())){
-                    $("#tbTen").html("*Nhập từ không dấu, chữ cái đầu mỗi từ phải viết hoa !!");
-                    $("#tbTen").addClass("mauDo");
-                    return false;
-                }
-
-                $("#tbTen").html("*");
-                return true;
-            }
-            $("#txtHoTen").blur(kiemTraHoTen);
-
-            function kiemTraEmail(){
-                var mauKt = /^([a-zA-Z]{1})([a-zA-Z0-9-_])*(@gmail.com){1}$/;
-                if($("#txtEmail").val() == ""){
-                    $("#tbEmail").html("Bắt buộc nhập !!");
-                    $("#tbEmail").addClass("mauDo");
-                    return false;
-                }
-                if(!mauKt.test($("#txtEmail").val())){
-                    $("#tbEmail").html("*Ký tự đầu là chữ, kết thúc bằng @gmail.com !!");
-                    $("#tbEmail").addClass("mauDo");
-                    return false;
-                }
-
-                $("#tbEmail").html("*");
-                return true;
-            }
-            $("#txtEmail").blur(kiemTraEmail);
-
-            function kiemTraNgaySinh() {
-                var ns = new Date($("#txtNgaySinh").val());
-                var today = new Date();
-
-                if($("#txtNgaySinh").val() == ""){
-                    $("#tbNgaySinh").html("Bắt buộc nhập !!");
-                    $("#tbNgaySinh").addClass("mauDo");
-                    return false;
-                }
-                if(eval(today.getFullYear() - ns.getFullYear() <= 10)){
-                    $("#tbNgaySinh").html("*Tuổi phải lớn hơn 10 !!");
-                    $("#tbNgaySinh").addClass("mauDo");
-                    return false;
-                }
-
-                $("#tbNgaySinh").html("*");
-                return true;
-            }
-            $("#txtNgaySinh").blur(kiemTraNgaySinh);
-
-
-            function kiemTraSoDienThoai() {
-                var mauKt = /[0-9]{8,15}$/;
-
-                if($("#txtSoDT").val() == ""){
-                    $("#tbSoDt").html("Bắt buộc nhập !!");
-                    $("#tbSoDt").addClass("mauDo");
-                    return false;
-                }
-                if(!mauKt.test($("#txtSoDT").val())){
-                    $("#tbSoDt").html("*Số điện thoại phải từ 8-15 số !!");
-                    $("#tbSoDt").addClass("mauDo");
-                    return false;
-                }
-
-                $("#tbSoDt").html("*");
-                return true;
-            }
-            $("#txtSoDT").blur(kiemTraSoDienThoai);
-
-            function kiemTraPassWord() {
-                var re = /(?=.*\d).{6,}/;
-
-                if($("#txtMatKhau").val() == ""){
-                    $("#mk").html("Bắt buộc nhập !!");
-                    $("#mk").addClass("mauDo");
-                    return false;
-                }
-                if(!re.test($("#txtMatKhau").val())){
-                    $("#mk").html("*Phải nhập ít nhất 6 ký tự !!");
-                    $("#mk").addClass("mauDo");
-                    return false;
-                }
-
-                $("#mk").html("*");
-                return true;
-            }
-            $("#txtMatKhau").blur(kiemTraPassWord);
-
-
-            function kiemTraXacNhanMatKhau() {
-                if($("#txtMatKhau").val() == ""){
-                    $("#mk").html("Bắt buộc nhập !!");
-                    $("#mk").addClass("mauDo");
-                    return false;
-                }
-                if($("#txtMatKhau").val() != $("#txtNhapLaiMatKhau").val()){
-                    $("#nlmk").html("*Phải giống ô mật khẩu !!");
-                    $("#nlmk").addClass("mauDo");
-                    return false;
-                }
-
-                $("#nlmk").html("*");
-                return true;
-            }
-            $("#txtNhapLaiMatKhau").blur(kiemTraXacNhanMatKhau);
-
-            $("#btnSave").click(function(){
-                if(kiemTraHoTen()==false || kiemTraEmail()==false || kiemTraNgaySinh == false ||
-                kiemTraSoDienThoai == false || kiemTraPassWord == false || kiemTraXacNhanMatKhau == false){
-                    alert('Bạn chưa nhập đầy đủ thông tin !!');
-                    return false;
-                }
-                else{
-                    $("#modal-SignUp").modal("hide");
-                    alert("Không thể đăng ký/đăng nhập ở trang này, vui lòng quay lại trang chủ để thực hiện !!");
-                    return true;
-                }
-            });
-
-            $("#btnSave2").click(function(){
-                $("#modal-SignIn").modal("hide");
-                alert("Không thể đăng ký/đăng nhập ở trang này, vui lòng quay lại trang chủ để thực hiện !!");
-                return true;
-            });
-
-        });
-    </script>
-</head>
-<body>
-    <div class="container bg-light">
-        <div class="row bg-info link">
-                    <div class="col-md-2 col-xl-2">
-                        <a href="#!">
+                <div class="d-flex align-items-center col-md-4 col-xl-4">
+                    <input
+                        type="search"
+                        name="txtSearch"
+                        class="search-input"
+                        placeholder="Tìm kiếm"
+                    />
+                    <i class="search-icon ti-search"></i>
+                    <div class="action-btn" style="display: inline-block">
+                        <input
+                            type="submit"
+                            value="SignIn"
+                            id="btnSignIn"
+                            class="SignIn"
+                        />
+                        <input
+                            type="submit"
+                            value="SignUp"
+                            class="btn-pink__light SignUp"
+                            id="btnSignUp"
+                        />
+                    </div>
+                    <div class="account-group">
+                        <i class="ti-shopping-cart"></i>
+                        <div class="account">
                             <img
-                                src="../assets/img/logo_web/logo-main.png"
-                                alt="logo"
+                                src="./../assets/img/account-avatar.png"
+                                alt="Avatar"
+                                class="avatar"
                                 width="100%"
                             />
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col-xl-6">
-                        <div class="row"><br></div>
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a href="TrangChu.html" class="nav-link text-white">TRANG CHỦ</a>
+                            <span class="username">Võ Đình Thông</span>
+                            <ul class="account-feature">
+                                <li>
+                                    <a href="#!">Tài Khoản Của Tôi</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="ThongTinTrangWeb.html" class="nav-link text-white">THÔNG TIN</a>
+                                <li>
+                                    <a href="#!">Đơn Mua</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="flase">DANH SÁCH SẢN PHẨM</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="DanhMucSanPham.html#TraiCayNhapKhau">Trái cây nhập khẩu</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="DanhMucSanPham.html#TraiCayCaoCap">Trái cây cao cấp</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="DanhMucSanPham.html#TraiCayDacSan">Trái cây đặc sản</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="DanhMucSanPham.html#TraiCaySayKho">Trái cây sấy khô</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link text-white">PHẢN HỒI</a>
+                                <li>
+                                    <a href="#!" class="btnLogout">
+                                        Đăng Xuất
+                                    </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </div>
                     </div>
-                    
+                </div>
+            </div>
+            <div class="container d-flex flex-column pt-5 pb-5">
+                <div class="col-md-4 col-xl-4">
+                    <label for="txtPhanHoi">
+                        NHẬP Ý KIẾN PHẢN HỒI CỦA BẠN VÀO ĐÂY:
+                    </label>
+                </div>
+                <div class="col-md-2 col-xl-2">
+                    <textarea
+                        name="txtPhanHoi"
+                        id="txtPhanHoi"
+                        cols="40"
+                        rows="8"
+                        placeholder="Nhập thông tin"
+                    ></textarea>
+                </div>
+
+                <div class="col-md-1 col-xl-1">
+                    <input
+                        type="submit"
+                        name="btnPhanHoi"
+                        id="btnPhanHoi"
+                        value="OK"
+                        class="btn btn-success btn-block"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pt-5 bg-dark__brown">
+            <div class="container">
+                <div class="row fa-stripe pb-4">
                     <div class="col-md-4 col-xl-4">
-                        <div class="row"><br></div>
-                        <input
-                            type="search"
-                            name="txtSearch"
-                            id=""
-                            placeholder="Tìm kiếm"
-                            style="text-align: left"
-                        />
-                        <!-- <i class="search-icon ti-search"></i> -->
-                        <input type="submit" value="SignIn" class="btn btn-dark btn-inline" id="btnSignIn">
-                        <input type="submit" value="SignUp" class="btn btn-dark btn-inline" id="btnSignUp">
-
-                        <!-- <div class="account-group">
-                            <i class="ti-shopping-cart"></i>
-                            <div class="account">
-                                <img
-                                    src="./../assets/img/account-avatar.png"
-                                    alt="Avatar"
-                                    class="avatar"
-                                    width="100%"
-                                />
-                                <span class="username">Võ Đình Thông</span>
-                                <ul class="account-feature">
-                                    <li>
-                                        <a href="#!">Tài Khoản Của Tôi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Đơn Mua</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="btnLogout">
-                                            Đăng Xuất
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
+                        <h4 class="top-contact text-light__blue">
+                            KẾT NỐI VỚI CHÚNG TÔI
+                        </h4>
+                        <ul class="navbar-nav">
+                            <li class="nav-item text-brown">
+                                Địa chỉ: 12 Nguyễn văn bảo, Phường 4, Quận Gò
+                                Vấp, TP.HCM.
+                            </li>
+                            <li class="nav-item text-brown">
+                                Số điện thoại: 0344 387 030.
+                            </li>
+                            <li class="nav-item text-brown">
+                                Email: LaptrinhWeb4@gmail.com.
+                            </li>
+                            <li class="nav-item text-brown">
+                                Giấy kinh doanh số: 41A8040123
+                            </li>
+                            <li class="nav-item text-brown">
+                                Ngày cấp: 22/02/2023.
+                            </li>
+                        </ul>
                     </div>
-        </div>
 
-        <div class="row"><br><br><br><br></div>
-
-        <div class="row">
-            <div class="col-md-4 col-xl-4">
-                <label for="txtPhanHoi">NHẬP Ý KIẾN PHẢN HỒI CỦA BẠN VÀO ĐÂY: </label>
-            </div>
-            <div class="col-md-2 col-xl-2">
-                <input type="text" name="txtPhanHoi" id="txtPhanHoi" placeholder="Nhập thông tin">
-            </div>
-
-            <div class="col-md-1 col-xl-1">
-                <input type="submit" name="btnPhanHoi" id="btnPhanHoi" value="OK" class="btn btn-success btn-block">
-            </div>
-        </div>
-
-        <div class="row"><br><br><br><br><br></div>
-        
-        <div class="row bg-dark fa-stripe">
-            <div class="col-md-12"><br><br></div>
-
-            <div class="col-md-4 col-xl-4">
-                <h4 class="top-contact text-white">
-                    KẾT NỐI VỚI CHÚNG TÔI
-                </h4>
-                <ul class="navbar-nav">
-                    <li class="nav-item text-light">
-                        Địa chỉ: 12 Nguyễn văn bảo, Phường 4,
-                        Quận Gò Vấp, TP.HCM.
-                    </li>
-                    <li class="nav-item text-light">
-                        Số điện thoại: 0344 387 030.
-                    </li>
-                    <li class="nav-item text-light">
-                        Email: LaptrinhWeb4@gmail.com.
-                    </li>
-                    <li class="nav-item text-light">
-                        Giấy kinh doanh số: 41A8040123
-                    </li>
-                    <li class="nav-item text-light">
-                        Ngày cấp: 22/02/2023.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-xl-2">
-                <h4 class="top-contact text-light">DỊCH VỤ</h4>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light">Khách hàng thân thiết</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light">Hỗ trợ giao hàng</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light">Mua tại cửa hàng</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light" >Tích điểm đổi thưởng</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-xl-2">
-                <h4 class="top-contact text-white">LIÊN KẾT</h4>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light">Cài đặt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light">Trợ giúp</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#!" class="nav-link text-light">Chính sách bảo mật</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 col-xl-4">
-                <h4 class="top-contact text-white">THÔNG TIN</h4>
-                <p class="text-light">
-                    Trái cây mang lại nhiều lợi ích cho sức
-                    khỏe. Nó như một phần của chế độ ăn uống
-                    lành mạnh có khả năng giảm nguy cơ mắc một
-                    số bệnh mãn tính. Vì vậy, chúng tôi cam kết
-                    cung cấp cho quý khách những loại trái cây
-                    giàu chất dinh dưỡng nhất đáp ứng mọi nhu
-                    cầu về an toàn, chất lượng trong từng sản
-                    phẩm.
-                </p>
-            </div>
-
-            <div class="col-md-12"><br><br></div>
-        </div>
-
-        <div class="row bg-secondary">
-            <div class="col-md-6 col-xl-6">
-                <h4 class="text-white">HAPPY FRUIT</h4>
-            </div>
-            <div class="col-md-6 col-xl-6">
-                <p class="text-right text-white">Trái cây an toàn đến với mọi nhà</p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="modal modal-SignIn" id="modal-SignUp">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="text-center">THÔNG TIN CÁ NHÂN</h3>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="col-md-2 col-xl-2">
+                        <h4 class="top-contact text-light__blue">DỊCH VỤ</h4>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Khách hàng thân thiết</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Hỗ trợ giao hàng</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Mua tại cửa hàng</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Tích điểm đổi thưởng</a
+                                >
+                            </li>
+                        </ul>
                     </div>
-                    <div class="modal-body">
-                        <form class="frm">
-                            <div class="row">
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtHoTen">Họ tên:<Br></label>
-                                    <input type="text" class="form-control" name="txtHoTen" id="txtHoTen">
-                                    <span id="tbTen" class="text-danger">*</span>
-                                </div>
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtEmail">Email:<Br></label>
-                                    <input type="text" class="form-control" name="txtEmail" id="txtEmail">
-                                    <span id="tbEmail" class="text-danger">*</span>
-                                </div>
-                            </div>
-                            <Br>
-                             <div class="row">
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtNgaySinh">Ngày sinh:<Br></label>
-                                    <input type="date" class="form-control" name="txtNgaySinh" id="txtNgaySinh">
-                                    <span id="tbNgaySinh" class="text-danger">*</span>
-                                </div>
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtSoDT">Số điện thoại:<Br></label>
-                                    <input type="text" class="form-control" name="txtSoDT" id="txtSoDT">
-                                    <span id="tbSoDt" class="text-danger">*</span>
-                                </div>
-                            </div>
-                            <Br>
-                            <div class="row">
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtDiaChi">Địa chỉ: <Br></label>
-                                    <input type="text"  class="form-control" name="txtDiaChi" id="txtDiaChi">
-                                </div>
-                                <div class="col-6 col-xl-6">
-                                    <Br>
-                                    <label for="">Giới tính: </label>
-                                    <input type="radio" name="txtGioiTinh" id="txtGioiTinh1">
-                                    <label for="txtGioiTinh1">Nam</label>   
-                                    <input type="radio" name="txtGioiTinh" id="txtGioiTinh2">                            
-                                    <label for="txtGioiTinh2">Nữ</label>
-                                </div>
-                            </div>
-                            <Br>
-                            <div class="row">
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtMatKhau">Mật Khẩu:<Br></label>
-                                    <input type="text" class="form-control" name="txtMatKhau" id="txtMatKhau">
-                                    <span id="mk" class="text-danger">*</span>
-                                </div>
-                                <div class="col-6 col-xl-6">
-                                    <label for="txtNhapLaiMatKhau">Nhập lại mật khẩu:</label>
-                                    <input type="text"  class="form-control" name="txtNhapLaiMatKhau" id="txtNhapLaiMatKhau">
-                                    <span id="nlmk" class="text-danger">*</span>
-                                </div>
-                            </div>
-                            <Br>
-                            <div class="row">
-                                <div class="col-5 col-xl-5"></div>
 
-                                <div class="col-4 col-xl-4">
-                                    <input type="button" value="Submit" id="btnSave" class="form-control btn btn-success btn-block">&nbsp;
-                                </div>
-
-                                <div class="col-3 col-xl-3">
-                                    <input type="reset" class="form-control btn btn-success btn-block" value="reset">
-                                </div>
-                            </div>
-                            <Br>
-                        </form>
+                    <div class="col-md-2 col-xl-2">
+                        <h4 class="top-contact text-light__blue">LIÊN KẾT</h4>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Cài đặt</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Trợ giúp</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-brown"
+                                    >Chính sách bảo mật</a
+                                >
+                            </li>
+                        </ul>
                     </div>
-                    <div class="modal-footer">
 
+                    <div class="col-md-4 col-xl-4">
+                        <h4 class="top-contact text-light__blue">THÔNG TIN</h4>
+                        <p class="text-brown">
+                            Trái cây mang lại nhiều lợi ích cho sức khỏe. Nó như
+                            một phần của chế độ ăn uống lành mạnh có khả năng
+                            giảm nguy cơ mắc một số bệnh mãn tính. Vì vậy, chúng
+                            tôi cam kết cung cấp cho quý khách những loại trái
+                            cây giàu chất dinh dưỡng nhất đáp ứng mọi nhu cầu về
+                            an toàn, chất lượng trong từng sản phẩm.
+                        </p>
+                    </div>
+                </div>
+                <div class="row pt-4 border__top">
+                    <div class="col-md-6 col-xl-6">
+                        <h6 class="text-light__blue">HAPPY FRUIT</h6>
+                    </div>
+                    <div class="col-md-6 col-xl-6">
+                        <p class="text-right text-light__blue">
+                            Trái cây an toàn đến với mọi nhà
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="modal modal-SignIn" id="modal-SignIn">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="text-center">ĐĂNG NHẬP</h3>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="frm">
-                            <div class="row">
-                                <div class="col-md-12 col-xl-12">
-                                    <label for="txtEmail">Email:<Br></label>
-                                </div>
+        <div class="container-fluid">
+            <div class="modal modal-SignUp">
+                <div
+                    class="modal-dialog modal-container modal-SignUp-container"
+                >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            THÔNG TIN CÁ NHÂN
+                            <div class="modal-close modal-SignUp-close">
+                                <i class="ti-close"></i>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12 col-xl-12">
-                                    <input type="text" class="form-control" name="txtEmail" id="txtEmail">
-                                </div>
-                            </div>
-                            <Br>
-                            <div class="row">
-                                <div class="col-md-12 col-xl-12">
-                                    <label for="txtMatKhau">Mật Khẩu:<Br></label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-xl-12">
-                                    <input type="text" class="form-control" name="txtMatKhau" id="txtMatKhau">
-                                </div>
-                            </div>
-                            <Br>
-                            <div class="row">
-                                <div class="col-md-5 col-xl-5"></div>
+                        </div>
 
-                                <div class="col-md-4 col-xl-4">
-                                    <input type="button" value="Submit" id="btnSave2" class=" form-control btn btn-success btn-block">&nbsp;
+                        <div class="modal-body">
+                            <form class="signUp-form-container">
+                                <div class="modal-body__wrapper">
+                                    <div class="item">
+                                        <label
+                                            for="txtHoTen"
+                                            class="modal-label"
+                                        >
+                                            Họ Tên:
+                                        </label>
+                                        <br />
+                                        <input
+                                            id="txtHoTen"
+                                            type="text"
+                                            class="modal-input"
+                                            onblur="kiemTraHoTen()"
+                                            placeholder="Nhập họ tên"
+                                        />
+                                        <br />
+                                        <span id="tbTen">*</span>
+                                    </div>
+
+                                    <div class="item">
+                                        <label
+                                            for="txtEmail"
+                                            class="modal-label"
+                                        >
+                                            Email:
+                                        </label>
+                                        <br />
+                                        <input
+                                            id="txtEmail"
+                                            type="email"
+                                            class="modal-input"
+                                            onblur="kiemTraEmail()"
+                                            placeholder="xxx123@gmail.com"
+                                        />
+                                        <br />
+                                        <span id="tbEmail">*</span>
+                                    </div>
                                 </div>
 
-                                <div class="col-md-3 col-xl-3">
-                                    <input type="reset" class="form-control btn btn-success btn-block" value="reset">
+                                <div class="modal-body__wrapper">
+                                    <div class="item">
+                                        <label
+                                            for="txtNgaySinh"
+                                            class="modal-label"
+                                            >Ngày sinh:
+                                        </label>
+                                        <input
+                                            id="txtNgaySinh"
+                                            type="date"
+                                            class="modal-input"
+                                            onblur="kiemTraNgaySinh()"
+                                            placeholder="Ngày sinh"
+                                        />
+                                        <br />
+                                        <span id="tbNgaySinh">*</span>
+                                    </div>
+
+                                    <div class="item">
+                                        <label for="txtSDT" class="modal-label"
+                                            >Số điện thoại:<br
+                                        /></label>
+                                        <input
+                                            id="txtSDT"
+                                            type="tel"
+                                            class="modal-input"
+                                            onblur="kiemTraSoDienThoai()"
+                                            placeholder="Nhập số ĐT"
+                                        />
+                                        <br />
+                                        <span id="tbSoDt">*</span>
+                                    </div>
                                 </div>
+
+                                <div class="modal-body__wrapper">
+                                    <div class="item">
+                                        <label
+                                            for="txtDiaChi"
+                                            class="modal-label"
+                                            >Địa chỉ:<br
+                                        /></label>
+                                        <input
+                                            id="txtDiaChi"
+                                            type="text"
+                                            class="modal-input"
+                                            placeholder="Nhập địa chỉ"
+                                        />
+                                        <br />
+                                        <span>*</span>
+                                    </div>
+
+                                    <div class="item" style="line-height: 82px">
+                                        <label
+                                            for="txtGioiTinh"
+                                            class="modal-label"
+                                            >Giới tính:
+                                        </label>
+                                        <input
+                                            id="txtGioiTinh1"
+                                            type="radio"
+                                            name="groupGioiTinh"
+                                        />
+                                        <label
+                                            for="txtGioiTinh1"
+                                            class="modal-label"
+                                            >Nam</label
+                                        >
+                                        <input
+                                            id="txtGioiTinh2"
+                                            type="radio"
+                                            name="groupGioiTinh"
+                                        />
+                                        <label
+                                            for="txtGioiTinh2"
+                                            class="modal-label"
+                                            >Nữ</label
+                                        >
+                                        <br />
+                                    </div>
+                                </div>
+
+                                <div class="modal-body__wrapper">
+                                    <div class="item">
+                                        <label
+                                            for="txtMatKhau"
+                                            class="modal-label"
+                                            >Mật khẩu:<br
+                                        /></label>
+                                        <input
+                                            id="txtMatKhau"
+                                            type="password"
+                                            class="modal-input"
+                                            onblur="kiemTraPassWord()"
+                                            placeholder="Nhập mật khẩu"
+                                        />
+                                        <br />
+                                        <span id="mk">*</span>
+                                    </div>
+
+                                    <div class="item">
+                                        <label
+                                            for="txtNhapLaiMatKhau"
+                                            class="modal-label"
+                                            >Nhập lại mật khẩu:<br
+                                        /></label>
+                                        <input
+                                            id="txtNhapLaiMatKhau"
+                                            type="password"
+                                            class="modal-input"
+                                            onblur="kiemTraXacNhanMatKhau()"
+                                            placeholder="Nhập lại mật khẩu"
+                                        />
+                                        <br />
+                                        <span id="nlmk">*</span>
+                                    </div>
+                                </div>
+                                <div class="modal-action">
+                                    <input type="submit" value="Đăng ký" />
+                                    <input type="reset" value="Xóa" />
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="request">
+                                <span>Nếu đã tài khoản?</span>
+                                <a href="#" class="login-request">Đăng nhập</a>
                             </div>
-                            <Br>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="modal modal-SignIn">
+                <div
+                    class="modal-dialog modal-container modal-SignIn-container"
+                >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            ĐĂNG NHẬP
+                            <header class="modal-close modal-SignIn-close">
+                                <i class="ti-close"></i>
+                            </header>
+                        </div>
+
+                        <div class="modal-body">
+                            <form class="signIn-form-container">
+                                <div class="item">
+                                    <label
+                                        for="txtEmail__login"
+                                        class="modal-label"
+                                        >Email:<br
+                                    /></label>
+                                    <input
+                                        id="txtEmail__login"
+                                        type="text"
+                                        class="modal-input"
+                                    />
+                                </div>
+                                <br />
+                                <div class="item">
+                                    <label
+                                        for="txtMatKhau__login"
+                                        class="modal-label"
+                                        >Mật khẩu:<br
+                                    /></label>
+                                    <input
+                                        id="txtMatKhau__login"
+                                        type="password"
+                                        class="modal-input"
+                                    />
+                                </div>
+                                <div class="item-SignIn">
+                                    <input type="submit" value="Đăng nhập" />
+                                </div>
+                                <div class="contact-SignIn">
+                                    <p>Hoặc đăng nhập bằng:</p>
+                                    <ul class="icon-contact">
+                                        <li>
+                                            <a href="#!">
+                                                <i class="ti-facebook"></i>
+                                                Facebook
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">
+                                                <i class="ti-instagram"></i>
+                                                Instagram
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!"
+                                                ><i class="ti-twitter"></i>
+                                                Twitter
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <label for="">Nếu chưa có tài khoản? </label>
+                            <a href="#" class="register-request">Đăng kí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="toast"></div>
         </div>
-    </div>
-</body>
+        <script src="../assets/JS/main.js"></script>
+        <script src="../assets/JS/login.js"></script>
+    </body>
 </html>

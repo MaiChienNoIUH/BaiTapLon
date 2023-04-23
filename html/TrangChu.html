@@ -20,8 +20,6 @@
             rel="stylesheet"
             href="../assets/font/themify-icons/themify-icons.css"
         />
-
-        <script></script>
     </head>
     <body>
         <div id="main">
@@ -36,7 +34,9 @@
                         </a>
                         <ul class="nav">
                             <li><a href="#!">Trang Chủ</a></li>
-                            <li><a href="ThongTinTrangWeb.html">Thông tin</a></li>
+                            <li>
+                                <a href="ThongTinTrangWeb.html">Thông tin</a>
+                            </li>
                             <li>
                                 <a href="#!">
                                     Danh mục Sản phẩm
@@ -45,19 +45,31 @@
                                 <ul class="subnav">
                                     <hr />
                                     <li>
-                                        <a href="DanhMucSanPham.html#TraiCayNhapKhau">Trái cây nhập khẩu</a>
+                                        <a
+                                            href="DanhMucSanPham.html#TraiCayNhapKhau"
+                                            >Trái cây nhập khẩu</a
+                                        >
                                     </li>
                                     <hr />
                                     <li>
-                                        <a href="DanhMucSanPham.html#TraiCayCaoCap">Trái cây cao cấp</a>
+                                        <a
+                                            href="DanhMucSanPham.html#TraiCayCaoCap"
+                                            >Trái cây cao cấp</a
+                                        >
                                     </li>
                                     <hr />
                                     <li>
-                                        <a href="DanhMucSanPham.html#TraiCayDacSan">Trái cây đặc sản</a>
+                                        <a
+                                            href="DanhMucSanPham.html#TraiCayDacSan"
+                                            >Trái cây đặc sản</a
+                                        >
                                     </li>
                                     <hr />
                                     <li>
-                                        <a href="DanhMucSanPham.html#TraiCaySayKho">Trái cây sấy khô</a>
+                                        <a
+                                            href="DanhMucSanPham.html#TraiCaySayKho"
+                                            >Trái cây sấy khô</a
+                                        >
                                     </li>
                                 </ul>
                             </li>
@@ -130,22 +142,6 @@
 
             <div id="Content">
                 <div class="main-content">
-                    <!-- <span id="test">*</span> -->
-                    <div class="table">
-                        <h1 style="text-align: center; margin-top: 100px;">DANH SÁCH ĐĂNG KÝ TÀI KHOẢN THÀNH CÔNG</h1>
-                        <table id="tbl">
-                            <tr>
-                                <th>STT</th>
-                                <th>HỌ TÊN</th>
-                                <th>EMAIL</th>
-                                <th>NGÀY SINH</th>
-                                <th>SỐ ĐIỆN THOẠI</th>
-                                <th>ĐỊA CHỈ</th>
-                                <th>GIỚI TÍNH</th>
-                                <th>MẬT KHẨU</th>
-                            </tr>
-                        </table>
-                    </div>
                     <!-- Trái cây nhập khẩu -->
                     <div class="fruit-item import-fruits">
                         <div class="content-top">
@@ -162,7 +158,10 @@
                             <div class="group group-item1">
                                 <!-- Item 1 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a
+                                        href="ChiTietSanPham.html"
+                                        onclick="setProductID(1)"
+                                    >
                                         <img
                                             src="../assets/img/content-img/nhomaudon.jpg"
                                             alt="Nho Hàn Quốc"
@@ -182,6 +181,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(1)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -190,11 +190,12 @@
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/taoxanhmy.jpg"
                                             alt="Táo Mỹ"
                                             class="thumb"
+                                            onclick="setProductID(2)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -210,6 +211,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(2)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -218,11 +220,12 @@
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/dualuoinhat.jpg"
                                             alt="Dưa Lưới Nhật"
                                             class="thumb"
+                                            onclick="setProductID(3)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -240,6 +243,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(3)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -250,11 +254,12 @@
                             <div class="group group-item2">
                                 <!-- Item 4 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/NhoDoKhongHat.png"
                                             alt="Nho đỏ không hạt"
                                             class="thumb"
+                                            onclick="setProductID(4)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -272,6 +277,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(4)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -280,11 +286,12 @@
                                 </div>
                                 <!-- Item 5 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/TaoRockitMy.png"
                                             alt="Táo Rockit Mỹ"
                                             class="thumb"
+                                            onclick="setProductID(5)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -300,6 +307,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(5)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -308,11 +316,12 @@
                                 </div>
                                 <!-- Item 6 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/VietQuatNewzealand.png"
                                             alt="Việt Quất Newzealand"
                                             class="thumb"
+                                            onclick="setProductID(6)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -330,6 +339,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(6)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -340,11 +350,12 @@
                             <div class="group group-item3">
                                 <!-- Item 7 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/DauTayHan.png"
                                             alt="Dâu Tây Hàn"
                                             class="thumb"
+                                            onclick="setProductID(7)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -360,6 +371,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(7)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -368,11 +380,12 @@
                                 </div>
                                 <!-- Item 8 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/DuaLuoiTaKi.png"
                                             alt="Dưa lưới Taki"
                                             class="thumb"
+                                            onclick="setProductID(8)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -388,6 +401,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(8)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -396,11 +410,12 @@
                                 </div>
                                 <!-- Item 9 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/SauRiengMusangKinhMalaysia.png"
                                             alt="Sầu Riêng MusangKinh Malaysia"
                                             class="thumb"
+                                            onclick="setProductID(9)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -418,6 +433,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(9)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -484,11 +500,12 @@
                             <div class="group group-item1">
                                 <!-- Item 1 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/CherryDoUc.jpg"
                                             alt="Cherry Uc"
                                             class="thumb"
+                                            onclick="setProductID(10)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -506,6 +523,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(10)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -514,11 +532,12 @@
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/ChaLaNamPhi.jpg"
                                             alt="Chà là tươi Nam Phi"
                                             class="thumb"
+                                            onclick="setProductID(11)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -538,6 +557,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(11)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -546,11 +566,12 @@
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/TaoMatVangNhat.jpg"
                                             alt="Táo mật vàng"
                                             class="thumb"
+                                            onclick="setProductID(12)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -570,6 +591,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(12)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -580,11 +602,12 @@
                             <div class="group group-item2">
                                 <!-- Item 4 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/LeSuaHanQuoc.png"
                                             alt="Lê Sữa Hàn Quốc"
                                             class="thumb"
+                                            onclick="setProductID(13)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -602,6 +625,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(13)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -610,11 +634,12 @@
                                 </div>
                                 <!-- Item 5 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/TaoBreezeNewzealand.png"
                                             alt="Táo Breeze Newzealand"
                                             class="thumb"
+                                            onclick="setProductID(14)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -632,6 +657,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(14)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -640,11 +666,12 @@
                                 </div>
                                 <!-- Item 6 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/CamCareNamPhi.png"
                                             alt="Cam Cara Ruột Đỏ"
                                             class="thumb"
+                                            onclick="setProductID(15)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -662,6 +689,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(15)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -672,11 +700,12 @@
                             <div class="group group-item3">
                                 <!-- Item 7 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/LeNamPhi.png"
                                             alt="Lê Nam Phi"
                                             class="thumb"
+                                            onclick="setProductID(16)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -693,6 +722,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(16)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -701,11 +731,12 @@
                                 </div>
                                 <!-- Item 8 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/TaoTuiNamPhi.png"
                                             alt="Táo úi Nam Phi"
                                             class="thumb"
+                                            onclick="setProductID(17)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -724,6 +755,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(17)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -732,11 +764,12 @@
                                 </div>
                                 <!-- Item 9 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/KiwiVangY.png"
                                             alt="Kiwi Vàng Ý"
                                             class="thumb"
+                                            onclick="setProductID(18)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -753,6 +786,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(18)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -818,11 +852,12 @@
                             <div class="group group-item1">
                                 <!-- Item 1 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/vaithieu.jpg"
                                             alt="Nho Hàn Quốc"
                                             class="thumb"
+                                            onclick="setProductID(19)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -840,6 +875,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(19)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -848,11 +884,12 @@
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/vusualoren.jpg"
                                             alt="Táo Mỹ"
                                             class="thumb"
+                                            onclick="setProductID(20)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -868,6 +905,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(20)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -876,11 +914,12 @@
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/duasaptravinh.jpg"
                                             alt="Dưa Lưới Nhật"
                                             class="thumb"
+                                            onclick="setProductID(21)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -898,6 +937,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(21)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -908,11 +948,12 @@
                             <div class="group group-item2">
                                 <!-- Item 4 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/BoSap.png"
                                             alt="Bơ sáp"
                                             class="thumb"
+                                            onclick="setProductID(22)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -928,6 +969,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(22)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -936,11 +978,12 @@
                                 </div>
                                 <!-- Item 5 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/MangCauXiem.png"
                                             alt="Mảng cầu xiêm"
                                             class="thumb"
+                                            onclick="setProductID(23)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -955,6 +998,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(23)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -963,11 +1007,12 @@
                                 </div>
                                 <!-- Item 6 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/ThanhLongRuotDo.png"
                                             alt="Thanh Long ruột đỏ"
                                             class="thumb"
+                                            onclick="setProductID(24)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -985,6 +1030,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(24)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -995,11 +1041,12 @@
                             <div class="group group-item3">
                                 <!-- Item 7 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/MitToNu.png"
                                             alt="Mít Tố Nữ"
                                             class="thumb"
+                                            onclick="setProductID(25)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1014,6 +1061,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(25)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1022,11 +1070,12 @@
                                 </div>
                                 <!-- Item 8 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/DuaHauLongAn.png"
                                             alt="Dưa hấu Long An"
                                             class="thumb"
+                                            onclick="setProductID(26)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1044,6 +1093,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(26)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1052,11 +1102,12 @@
                                 </div>
                                 <!-- Item 9 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/Buoi5Roi.png"
                                             alt="Bưởi năm roi"
                                             class="thumb"
+                                            onclick="setProductID(27)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1071,6 +1122,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(27)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1137,11 +1189,12 @@
                             <div class="group group-item1">
                                 <!-- Item 1 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/SungSayKho.jpg"
                                             alt="Sung loại 1 sấy khô"
                                             class="thumb"
+                                            onclick="setProductID(28)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1159,6 +1212,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(28)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1167,11 +1221,12 @@
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/NhoDenSayKho.jpg"
                                             alt="Nho đen sấy khô"
                                             class="thumb"
+                                            onclick="setProductID(29)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1189,6 +1244,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(29)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1197,11 +1253,12 @@
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/TaoDoKho.jpg"
                                             alt="Táo đỏ sấy khô"
                                             class="thumb"
+                                            onclick="setProductID(30)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1219,6 +1276,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(30)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1229,11 +1287,12 @@
                             <div class="group group-item2">
                                 <!-- Item 4 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/ManSayChanhMuoi.png"
                                             alt="Mận sấy chanh muối"
                                             class="thumb"
+                                            onclick="setProductID(31)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1251,6 +1310,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(31)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1259,11 +1319,12 @@
                                 </div>
                                 <!-- Item 5 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/DauTaySay.png"
                                             alt="Dâu sấy giòn"
                                             class="thumb"
+                                            onclick="setProductID(32)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1280,6 +1341,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(32)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1288,11 +1350,12 @@
                                 </div>
                                 <!-- Item 6 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/ChaLaKho.png"
                                             alt="Chà Là Khô Natural"
                                             class="thumb"
+                                            onclick="setProductID(33)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1311,6 +1374,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(33)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1321,11 +1385,12 @@
                             <div class="group group-item3">
                                 <!-- Item 7 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/MoTaySayDeo.png"
                                             alt="Mơ Tây Sấy Dẻo"
                                             class="thumb"
+                                            onclick="setProductID(34)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1344,6 +1409,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(34)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1352,11 +1418,12 @@
                                 </div>
                                 <!-- Item 8 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/XoaiSayDeo.png"
                                             alt="Xoài Sấy Dẻo"
                                             class="thumb"
+                                            onclick="setProductID(35)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1373,6 +1440,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(35)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1381,11 +1449,12 @@
                                 </div>
                                 <!-- Item 9 -->
                                 <div class="item">
-                                    <a href="#!">
+                                    <a href="ChiTietSanPham.html">
                                         <img
                                             src="../assets/img/content-img/LongTaoSay.png"
                                             alt="Long Táo Sấy"
                                             class="thumb"
+                                            onclick="setProductID(36)"
                                         />
                                     </a>
                                     <div class="fruit-info">
@@ -1402,6 +1471,7 @@
                                             <a
                                                 href="ChiTietSanPham.html"
                                                 class="btn"
+                                                onclick="setProductID(36)"
                                             >
                                                 Thêm vào giỏ hàng
                                             </a>
@@ -1544,238 +1614,253 @@
         </div>
 
         <div class="modal modal-SignUp">
-            <div class="modal-container modal-SignUp-container">
-                <div class="modal-close modal-SignUp-close">
-                    <i class="ti-close"></i>
-                </div>
-
-                <form class="signUp-form-container">
-                    <div class="modal-header">THÔNG TIN CÁ NHÂN</div>
-
-                    <div class="modal-body">
-                        <div class="modal-body__wrapper">
-                            <div class="item">
-                                <label for="txtHoTen" class="modal-label">
-                                    Họ Tên:
-                                </label>
-                                <br />
-                                <input
-                                    id="txtHoTen"
-                                    type="text"
-                                    class="modal-input"
-                                    onblur="kiemTraHoTen()"
-                                    placeholder="Nhập họ tên"
-                                />
-                                <br />
-                                <span id="tbTen">*</span>
-                            </div>
-
-                            <div class="item">
-                                <label for="txtEmail" class="modal-label">
-                                    Email:
-                                </label>
-                                <br />
-                                <input
-                                    id="txtEmail"
-                                    type="email"
-                                    class="modal-input"
-                                    onblur="kiemTraEmail()"
-                                    placeholder="xxx123@gmail.com"
-                                />
-                                <br />
-                                <span id="tbEmail">*</span>
-                            </div>
-                        </div>
-
-                        <div class="modal-body__wrapper">
-                            <div class="item">
-                                <label for="txtNgaySinh" class="modal-label"
-                                    >Ngày sinh:
-                                </label>
-                                <input
-                                    id="txtNgaySinh"
-                                    type="date"
-                                    class="modal-input"
-                                    onblur="kiemTraNgaySinh()"
-                                    placeholder="Ngày sinh"
-                                />
-                                <br />
-                                <span id="tbNgaySinh">*</span>
-                            </div>
-
-                            <div class="item">
-                                <label for="txtSDT" class="modal-label"
-                                    >Số điện thoại:<br
-                                /></label>
-                                <input
-                                    id="txtSDT"
-                                    type="tel"
-                                    class="modal-input"
-                                    onblur="kiemTraSoDienThoai()"
-                                    placeholder="Nhập số ĐT"
-                                />
-                                <br />
-                                <span id="tbSoDt">*</span>
-                            </div>
-                        </div>
-
-                        <div class="modal-body__wrapper">
-                            <div class="item">
-                                <label for="txtDiaChi" class="modal-label"
-                                    >Địa chỉ:<br
-                                /></label>
-                                <input
-                                    id="txtDiaChi"
-                                    type="text"
-                                    class="modal-input"
-                                    placeholder="Nhập địa chỉ"
-                                />
-                                <br />
-                                <span>*</span>
-                            </div>
-
-                            <div class="item" style="line-height: 82px">
-                                <label for="txtGioiTinh" class="modal-label"
-                                    >Giới tính:
-                                </label>
-                                <input
-                                    id="txtGioiTinh1"
-                                    type="radio"
-                                    name="groupGioiTinh"
-                                />
-                                <label for="txtGioiTinh1" class="modal-label"
-                                    >Nam</label
-                                >
-                                <input
-                                    id="txtGioiTinh2"
-                                    type="radio"
-                                    name="groupGioiTinh"
-                                />
-                                <label for="txtGioiTinh2" class="modal-label"
-                                    >Nữ</label
-                                >
-                                <br />
-                            </div>
-                        </div>
-
-                        <div class="modal-body__wrapper">
-                            <div class="item">
-                                <label for="txtMatKhau" class="modal-label"
-                                    >Mật khẩu:<br
-                                /></label>
-                                <input
-                                    id="txtMatKhau"
-                                    type="password"
-                                    class="modal-input"
-                                    onblur="kiemTraPassWord()"
-                                    placeholder="Nhập mật khẩu"
-                                />
-                                <br />
-                                <span id="mk">*</span>
-                            </div>
-
-                            <div class="item">
-                                <label
-                                    for="txtNhapLaiMatKhau"
-                                    class="modal-label"
-                                    >Nhập lại mật khẩu:<br
-                                /></label>
-                                <input
-                                    id="txtNhapLaiMatKhau"
-                                    type="password"
-                                    class="modal-input"
-                                    onblur="kiemTraXacNhanMatKhau()"
-                                    placeholder="Nhập lại mật khẩu"
-                                />
-                                <br />
-                                <span id="nlmk">*</span>
-                            </div>
+            <div class="modal-dialog modal-container modal-SignUp-container">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        THÔNG TIN CÁ NHÂN
+                        <div class="modal-close modal-SignUp-close">
+                            <i class="ti-close"></i>
                         </div>
                     </div>
 
-                    <footer class="modal-footer">
-                        <div class="item">
-                            <input type="submit" value="Đăng ký" onclick="dangKy()"/>
-                            <input type="reset" value="Xóa" />
-                        </div>
+                    <div class="modal-body">
+                        <form class="signUp-form-container">
+                            <div class="modal-body__wrapper">
+                                <div class="item">
+                                    <label for="txtHoTen" class="modal-label">
+                                        Họ Tên:
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="txtHoTen"
+                                        type="text"
+                                        class="modal-input"
+                                        onblur="kiemTraHoTen()"
+                                        placeholder="Nhập họ tên"
+                                    />
+                                    <br />
+                                    <span id="tbTen">*</span>
+                                </div>
+
+                                <div class="item">
+                                    <label for="txtEmail" class="modal-label">
+                                        Email:
+                                    </label>
+                                    <br />
+                                    <input
+                                        id="txtEmail"
+                                        type="email"
+                                        class="modal-input"
+                                        onblur="kiemTraEmail()"
+                                        placeholder="xxx123@gmail.com"
+                                    />
+                                    <br />
+                                    <span id="tbEmail">*</span>
+                                </div>
+                            </div>
+
+                            <div class="modal-body__wrapper">
+                                <div class="item">
+                                    <label for="txtNgaySinh" class="modal-label"
+                                        >Ngày sinh:
+                                    </label>
+                                    <input
+                                        id="txtNgaySinh"
+                                        type="date"
+                                        class="modal-input"
+                                        onblur="kiemTraNgaySinh()"
+                                        placeholder="Ngày sinh"
+                                    />
+                                    <br />
+                                    <span id="tbNgaySinh">*</span>
+                                </div>
+
+                                <div class="item">
+                                    <label for="txtSDT" class="modal-label"
+                                        >Số điện thoại:<br
+                                    /></label>
+                                    <input
+                                        id="txtSDT"
+                                        type="tel"
+                                        class="modal-input"
+                                        onblur="kiemTraSoDienThoai()"
+                                        placeholder="Nhập số ĐT"
+                                    />
+                                    <br />
+                                    <span id="tbSoDt">*</span>
+                                </div>
+                            </div>
+
+                            <div class="modal-body__wrapper">
+                                <div class="item">
+                                    <label for="txtDiaChi" class="modal-label"
+                                        >Địa chỉ:<br
+                                    /></label>
+                                    <input
+                                        id="txtDiaChi"
+                                        type="text"
+                                        class="modal-input"
+                                        placeholder="Nhập địa chỉ"
+                                    />
+                                    <br />
+                                    <span>*</span>
+                                </div>
+
+                                <div class="item" style="line-height: 82px">
+                                    <label for="txtGioiTinh" class="modal-label"
+                                        >Giới tính:
+                                    </label>
+                                    <input
+                                        id="txtGioiTinh1"
+                                        type="radio"
+                                        name="groupGioiTinh"
+                                    />
+                                    <label
+                                        for="txtGioiTinh1"
+                                        class="modal-label"
+                                        >Nam</label
+                                    >
+                                    <input
+                                        id="txtGioiTinh2"
+                                        type="radio"
+                                        name="groupGioiTinh"
+                                    />
+                                    <label
+                                        for="txtGioiTinh2"
+                                        class="modal-label"
+                                        >Nữ</label
+                                    >
+                                    <br />
+                                </div>
+                            </div>
+
+                            <div class="modal-body__wrapper">
+                                <div class="item">
+                                    <label for="txtMatKhau" class="modal-label"
+                                        >Mật khẩu:<br
+                                    /></label>
+                                    <input
+                                        id="txtMatKhau"
+                                        type="password"
+                                        class="modal-input"
+                                        onblur="kiemTraPassWord()"
+                                        placeholder="Nhập mật khẩu"
+                                    />
+                                    <br />
+                                    <span id="mk">*</span>
+                                </div>
+
+                                <div class="item">
+                                    <label
+                                        for="txtNhapLaiMatKhau"
+                                        class="modal-label"
+                                        >Nhập lại mật khẩu:<br
+                                    /></label>
+                                    <input
+                                        id="txtNhapLaiMatKhau"
+                                        type="password"
+                                        class="modal-input"
+                                        onblur="kiemTraXacNhanMatKhau()"
+                                        placeholder="Nhập lại mật khẩu"
+                                    />
+                                    <br />
+                                    <span id="nlmk">*</span>
+                                </div>
+                            </div>
+                            <div class="modal-action">
+                                <input type="submit" value="Đăng ký" />
+                                <input type="reset" value="Xóa" />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
                         <div class="request">
                             <span>Nếu đã tài khoản?</span>
                             <a href="#" class="login-request">Đăng nhập</a>
                         </div>
-                    </footer>
-                </form>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="modal modal-SignIn">
-            <div class="modal-container modal-SignIn-container">
-                <header class="modal-close modal-SignIn-close">
-                    <i class="ti-close"></i>
-                </header>
-
-                <form class="signIn-form-container">
-                    <div class="modal-header">ĐĂNG NHẬP</div>
-
-                    <div class="modal-body">
-                        <div class="item">
-                            <label for="txtEmail__login" class="modal-label"
-                                >Email:<br
-                            /></label>
-                            <input
-                                id="txtEmail__login"
-                                type="text"
-                                class="modal-input"
-                            />
-                        </div>
-                        <br />
-                        <div class="item">
-                            <label for="txtMatKhau__login" class="modal-label"
-                                >Mật khẩu:<br
-                            /></label>
-                            <input
-                                id="txtMatKhau__login"
-                                type="password"
-                                class="modal-input"
-                            />
-                        </div>
-                        <div class="item-SignIn">
-                            <input type="submit" value="Đăng nhập" />
-                        </div>
-                        <div class="contact-SignIn">
-                            <p>Hoặc đăng nhập bằng:</p>
-                            <ul class="icon-contact">
-                                <li>
-                                    <a href="#!">
-                                        <i class="ti-facebook"></i>
-                                        Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <i class="ti-instagram"></i>
-                                        Instagram
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!"
-                                        ><i class="ti-twitter"></i>
-                                        Twitter
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="modal-dialog modal-container modal-SignIn-container">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        ĐĂNG NHẬP
+                        <header class="modal-close modal-SignIn-close">
+                            <i class="ti-close"></i>
+                        </header>
                     </div>
 
-                    <footer class="modal-footer">
+                    <div class="modal-body">
+                        <form class="signIn-form-container">
+                            <div class="item">
+                                <label for="txtEmail__login" class="modal-label"
+                                    >Email:<br
+                                /></label>
+                                <input
+                                    id="txtEmail__login"
+                                    type="text"
+                                    class="modal-input"
+                                />
+                            </div>
+                            <br />
+                            <div class="item">
+                                <label
+                                    for="txtMatKhau__login"
+                                    class="modal-label"
+                                    >Mật khẩu:<br
+                                /></label>
+                                <input
+                                    id="txtMatKhau__login"
+                                    type="password"
+                                    class="modal-input"
+                                />
+                            </div>
+                            <div class="item-SignIn">
+                                <input type="submit" value="Đăng nhập" />
+                            </div>
+                            <div class="contact-SignIn">
+                                <p>Hoặc đăng nhập bằng:</p>
+                                <ul class="icon-contact">
+                                    <li>
+                                        <a href="#!">
+                                            <i class="ti-facebook"></i>
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">
+                                            <i class="ti-instagram"></i>
+                                            Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!"
+                                            ><i class="ti-twitter"></i>
+                                            Twitter
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
                         <label for="">Nếu chưa có tài khoản? </label>
                         <a href="#" class="register-request">Đăng kí</a>
-                    </footer>
-                </form>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="toast"></div>
 
         <script src="../assets/js/main.js"></script>
+
+        <script src="../assets/JS/home.js"></script>
+        <script src="../assets/JS/login.js"></script>
     </body>
 </html>
