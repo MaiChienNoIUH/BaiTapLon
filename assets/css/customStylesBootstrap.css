@@ -22,6 +22,10 @@ p.text-light__blue {
     background: #2e2100;
 }
 
+.bg-gray__brown{
+    background: #f8f9fa;
+}
+
 [class*="col-"] {
     padding: 0;
 }
@@ -70,10 +74,11 @@ p.text-light__blue {
 }
 
 .search-input {
+    width: 160px;
     border-radius: 8px;
     padding: 10px 16px;
     height: 40px;
-    margin-left: -100px;
+    margin-left: -25px;
     margin-right: 12px;
     border: 1px solid transparent;
 }
@@ -176,4 +181,8 @@ input#btnSignIn:hover {
 
 .fa-stripe:before {
     content: unset;
+}
+
+#header .search-btn input{
+    width: 150px;
 }

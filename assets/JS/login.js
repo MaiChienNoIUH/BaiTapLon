@@ -50,7 +50,7 @@ modal_SignInContainer.addEventListener("click", function (event) {
     event.stopPropagation();
 });
 
-// Regular expression
+// Regular expression 
 function kiemTraHoTen() {
     var re = /^([A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]+))+$/;
     if (re.test($("#txtHoTen").value) == false) {
@@ -322,4 +322,15 @@ function showErrorSignInToast() {
         type: "error",
         duration: 2000,
     });
+}
+
+//Kiểm tra phản hồi
+function kiemTraPhanHoi(){
+    txtPhanHoi
+    if ($("#txtPhanHoi").value == "") {
+        alert("Vui Lòng nhập thông tin phản hồi !!!");
+        return false;
+    }
+    else
+        alert("Chúng tôi đã ghi nhận phản hồi của bạn!");
 }
