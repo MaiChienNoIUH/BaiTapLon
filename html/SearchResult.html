@@ -531,6 +531,7 @@
             let searchResult = JSON.parse(localStorage.getItem("searchResult"));
             let searchQuery = localStorage.getItem("searchQuery");
             let searchResultHTML = "";
+            document.title = `Tìm kiếm: ${searchQuery}`;
 
             if (searchResult && searchResult.length > 0) {
                 document.querySelector(
