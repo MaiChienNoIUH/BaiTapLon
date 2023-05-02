@@ -29,72 +29,78 @@ const premiumGroups = $$(".premium-fruits .group");
 const specialtyGroups = $$(".specialty-fruits .group");
 const dryGroups = $$(".dry-fruits .group");
 
-//const groupWidth = importGroups[0].offsetWidth;
-//Chuyển động phù hợp với kích cỡ màn hình
-var groupWidth;
-var screenWidth = document.documentElement.clientWidth;
-if (screenWidth < 740) groupWidth = 340;
-else if (screenWidth >= 740 && screenWidth < 1024) groupWidth = 740;
-else if (screenWidth >= 1024) groupWidth = 1170;
+// Chuyển động phù hợp với kích cỡ màn hình
+const GROUP_WIDTHS = {
+    SMALL: 340,
+    MEDIUM: 740,
+    LARGE: 1170,
+};
 
 const groupLength = importGroups.length;
 
-let index = 0;
-let index1 = 0;
-let index2 = 0;
-let index3 = 0;
+const groups = [
+    {
+        btnPrev: listPrevBtn[0],
+        btnNext: listNextBtn[0],
+        index: 0,
+        items: importGroups,
+        wrap: "import-fruits",
+    },
+    {
+        btnPrev: listPrevBtn[1],
+        btnNext: listNextBtn[1],
+        index: 0,
+        items: premiumGroups,
+        wrap: "premium-fruits",
+    },
+    {
+        btnPrev: listPrevBtn[2],
+        btnNext: listNextBtn[2],
+        index: 0,
+        items: specialtyGroups,
+        wrap: "specialty-fruits",
+    },
+    {
+        btnPrev: listPrevBtn[3],
+        btnNext: listNextBtn[3],
+        index: 0,
+        items: dryGroups,
+        wrap: "dry-fruits",
+    },
+];
 
-listPrevBtn[0].onclick = () => {
-    index--;
-    if (index < 0) index = groupLength - 1;
-    updateGroups(index, importGroups);
-};
+groups.forEach((group) => {
+    group.btnPrev.addEventListener("click", () => {
+        group.index = (group.index - 1 + groupLength) % groupLength;
+        updateGroups(group.index, group.items, group.wrap);
+    });
 
-listNextBtn[0].onclick = () => {
-    index++;
-    if (index >= groupLength) index = 0;
-    updateGroups(index, importGroups);
-};
+    group.btnNext.addEventListener("click", () => {
+        group.index = (group.index + 1) % groupLength;
+        updateGroups(group.index, group.items, group.wrap);
+    });
+});
 
-listPrevBtn[1].onclick = () => {
-    index1--;
-    if (index1 < 0) index1 = groupLength - 1;
-    updateGroups(index1, premiumGroups);
-};
+function updateGroups(index, items, wrap) {
+    const screenWidth = document.documentElement.clientWidth;
+    let groupWidth;
+    // Thêm code xử lý class active cho span.dot
+    const dots = $$(`.${wrap} .animation .dots > .dot`);
+    dots.forEach((dot, dotIndex) => {
+        if (dotIndex === index) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
 
-listNextBtn[1].onclick = () => {
-    index1++;
-    if (index1 >= groupLength) index1 = 0;
-    updateGroups(index1, premiumGroups);
-};
+    if (screenWidth < 740) groupWidth = GROUP_WIDTHS.SMALL;
+    else if (screenWidth >= 740 && screenWidth < 1024)
+        groupWidth = GROUP_WIDTHS.MEDIUM;
+    else if (screenWidth >= 1024) groupWidth = GROUP_WIDTHS.LARGE;
 
-listPrevBtn[2].onclick = () => {
-    index2--;
-    if (index2 < 0) index2 = groupLength - 1;
-    updateGroups(index2, specialtyGroups);
-};
-
-listNextBtn[2].onclick = () => {
-    index2++;
-    if (index2 >= groupLength) index2 = 0;
-    updateGroups(index2, specialtyGroups);
-};
-
-listPrevBtn[3].onclick = () => {
-    index3--;
-    if (index3 < 0) index3 = groupLength - 1;
-    updateGroups(index3, dryGroups);
-};
-
-listNextBtn[3].onclick = () => {
-    index3++;
-    if (index3 >= groupLength) index3 = 0;
-    updateGroups(index3, dryGroups);
-};
-
-function updateGroups(index, groups) {
     const distance = -index * groupWidth;
-    groups.forEach((group) => {
-        group.style.transform = `translateX(${distance}px)`;
+    items.forEach((item) => {
+        item.style.transform = `translateX(${distance}px)`;
     });
 }

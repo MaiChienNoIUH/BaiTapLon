@@ -386,10 +386,10 @@ span {
 
 /* Toast Message */
 #toast {
-    position: fixed;
-    top: 32px;
-    right: 32px;
-    z-index: 999999;
+    position: fixed !important;
+    top: 32px !important;
+    right: 32px !important;
+    z-index: 999999 !important;
 }
 
 .toast {
@@ -403,6 +403,7 @@ span {
     border-left: 4px solid;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     transition: all linear 0.3s;
+    opacity: unset;
 }
 
 @keyframes slideInLeft {

@@ -50,7 +50,7 @@ modal_SignInContainer.addEventListener("click", function (event) {
     event.stopPropagation();
 });
 
-// Regular expression 
+// Regular expression
 function kiemTraHoTen() {
     var re = /^([A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]+))+$/;
     if (re.test($("#txtHoTen").value) == false) {
@@ -285,7 +285,7 @@ function showSuccessSignUpToast() {
         title: "Success!",
         message: "Bạn đã đăng ký thành công tài khoản.",
         type: "success",
-        duration: 2000,
+        duration: 3000,
     });
 }
 
@@ -294,7 +294,7 @@ function showSuccessSignInToast() {
         title: "Success!",
         message: "Bạn đã đăng nhập thành công.",
         type: "success",
-        duration: 2000,
+        duration: 3000,
     });
 }
 
@@ -303,7 +303,7 @@ function showSuccessSignOutToast() {
         title: "Success!",
         message: "Bạn đã đăng xuất thành công.",
         type: "success",
-        duration: 2000,
+        duration: 3000,
     });
 }
 
@@ -312,7 +312,7 @@ function showErrorSignUpToast() {
         title: "Failed!",
         message: "Bạn chưa nhập đầy đủ thông tin.",
         type: "error",
-        duration: 2000,
+        duration: 3000,
     });
 }
 function showErrorSignInToast() {
@@ -320,17 +320,15 @@ function showErrorSignInToast() {
         title: "Failed!",
         message: "Tên đăng nhập hoặc mật khẩu không đúng.",
         type: "error",
-        duration: 2000,
+        duration: 3000,
     });
 }
 
 //Kiểm tra phản hồi
-function kiemTraPhanHoi(){
-    txtPhanHoi
+function kiemTraPhanHoi() {
+    txtPhanHoi;
     if ($("#txtPhanHoi").value == "") {
         alert("Vui Lòng nhập thông tin phản hồi !!!");
         return false;
-    }
-    else
-        alert("Chúng tôi đã ghi nhận phản hồi của bạn!");
+    } else alert("Chúng tôi đã ghi nhận phản hồi của bạn!");
 }

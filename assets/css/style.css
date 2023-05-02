@@ -45,7 +45,7 @@ ul {
 /* Header */
 #header {
     width: 100%;
-    background-color: #e6f0ff;
+    background-color: #fff1b5;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -414,7 +414,7 @@ ul {
 }
 
 /* Sitemap */
-#Content .Sitemap{
+#Content .Sitemap {
     margin-top: 200px;
     text-align: center;
 }

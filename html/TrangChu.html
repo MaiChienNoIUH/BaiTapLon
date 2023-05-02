@@ -81,11 +81,13 @@
                             <input
                                 type="search"
                                 name="txtSearch"
-                                id=""
+                                id="txtSearch"
                                 placeholder="Tìm kiếm"
                                 style="text-align: left"
                             />
-                            <i class="search-icon ti-search"></i>
+                            <a href="#!" onclick="searchProduct()"
+                                ><i class="search-icon ti-search"></i
+                            ></a>
                         </div>
 
                         <div class="action-btn">
@@ -1525,9 +1527,16 @@
                     </div>
 
                     <div class="Sitemap">
-                        <h2 style="text-align: center;">Sitemap của trang web:</h2>
-                        <Br>
-                        <img src="../assets/img/content-img/Sitemap.png" alt="SiteMap" width="70%" style="margin: auto; text-align: center;">
+                        <h2 style="text-align: center">
+                            Sitemap của trang web:
+                        </h2>
+                        <br />
+                        <img
+                            src="../assets/img/content-img/Sitemap.png"
+                            alt="SiteMap"
+                            width="70%"
+                            style="margin: auto; text-align: center"
+                        />
                     </div>
                 </div>
             </div>
@@ -1866,8 +1875,8 @@
         <div id="toast"></div>
 
         <script src="../assets/js/main.js"></script>
-
         <script src="../assets/JS/home.js"></script>
         <script src="../assets/JS/login.js"></script>
+        <script src="../assets/JS/search.js"></script>
     </body>
 </html>

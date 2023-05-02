@@ -22,7 +22,7 @@ p.text-light__blue {
     background: #2e2100;
 }
 
-.bg-gray__brown{
+.bg-gray__brown {
     background: #f8f9fa;
 }
 
@@ -183,6 +183,6 @@ input#btnSignIn:hover {
     content: unset;
 }
 
-#header .search-btn input{
+#header .search-btn input {
     width: 150px;
 }

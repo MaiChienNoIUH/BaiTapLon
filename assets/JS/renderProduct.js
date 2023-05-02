@@ -3,11 +3,9 @@ if (typeof $ === "undefined") {
     const $$ = document.querySelectorAll.bind(document);
 }
 let listProduct = JSON.parse(localStorage.getItem("listProduct"));
-console.log(listProduct);
 let id = localStorage.getItem("id");
 
 let product = listProduct.find((product) => product.id == id);
-console.log(product);
 $("#productName").innerHTML = product.name;
 $("#price").innerHTML = product.price;
 $("#desc").innerHTML = product.desc;
