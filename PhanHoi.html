@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Phản hồi</title>
-        <link rel="icon" href="../assets/img/face-icon/logo3.jpg" />
+        <link rel="icon" href="assets/img/face-icon/logo3.jpg" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,14 +15,14 @@
         />
         <link
             rel="stylesheet"
-            href="../assets/font/themify-icons/themify-icons.css"
+            href="assets/font/themify-icons/themify-icons.css"
         />
 
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-        <script src="../assets/js/jquery-3.6.4.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../assets/css/customStylesBootstrap.css" />
-        <link rel="stylesheet" href="../assets/css/modal.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/css/customStylesBootstrap.css" />
+        <link rel="stylesheet" href="assets/css/modal.css" />
     </head>
     <body>
         <div class="container-fluid bg-light__blue pb-5">
@@ -31,7 +31,7 @@
                     <div class="col-md-1 col-xl-1">
                         <a href="#!">
                             <img
-                                src="../assets/img/logo_web/logo-main.png"
+                                src="assets/img/logo_web/logo-main.png"
                                 alt="logo"
                                 width="80px"
                                 height="80px"
@@ -142,7 +142,7 @@
                             <i class="ti-shopping-cart"></i>
                             <div class="account">
                                 <img
-                                    src="./../assets/img/account-avatar.png"
+                                    src="assets/img/account-avatar.png"
                                     alt="Avatar"
                                     class="avatar"
                                     width="100%"
@@ -167,14 +167,29 @@
                 </div>
             </div>
             <div class="container d-flex flex-column pt-5 pb-5">
-                <div
-                    class="col-md-12 col-xl-12"
-                    style="margin: auto; width: 70%"
-                >
-                    <img
-                        src="../assets/img/content-img/SiteMapNew.jpg"
-                        alt="SiteMap"
-                        width="100%"
+                <div class="col-md-4 col-xl-4">
+                    <label for="txtPhanHoi">
+                        NHẬP Ý KIẾN PHẢN HỒI CỦA BẠN VÀO ĐÂY:
+                    </label>
+                </div>
+                <div class="col-md-2 col-xl-2">
+                    <textarea
+                        name="txtPhanHoi"
+                        id="txtPhanHoi"
+                        cols="40"
+                        rows="8"
+                        placeholder="Nhập thông tin"
+                    ></textarea>
+                </div>
+
+                <div class="col-md-1 col-xl-1">
+                    <input
+                        type="submit"
+                        name="btnPhanHoi"
+                        id="btnPhanHoi"
+                        value="OK"
+                        class="btn btn-success btn-block"
+                        onclick="kiemTraPhanHoi()"
                     />
                 </div>
             </div>
@@ -544,8 +559,8 @@
 
             <div id="toast"></div>
         </div>
-        <script src="../assets/JS/main.js"></script>
-        <script src="../assets/JS/login.js"></script>
-        <script src="../assets/JS/search.js"></script>
+        <script src="assets/JS/main.js"></script>
+        <script src="assets/JS/login.js"></script>
+        <script src="assets/JS/search.js"></script>
     </body>
 </html>

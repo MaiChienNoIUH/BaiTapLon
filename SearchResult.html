@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Chi tiết sản phẩm</title>
-        <link rel="icon" href="../assets/img/face-icon/logo3.jpg" />
+        <title>Document</title>
+        <link rel="icon" href="assets/img/face-icon/logo3.jpg" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,15 +15,14 @@
         />
         <link
             rel="stylesheet"
-            href="../assets/font/themify-icons/themify-icons.css"
+            href="assets/font/themify-icons/themify-icons.css"
         />
-
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-        <script src="../assets/js/jquery-3.6.4.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../assets/css/modal.css" />
-        <link rel="stylesheet" href="../assets/css/customStylesBootstrap.css" />
-        <link rel="stylesheet" href="../assets/css/chitietsanpham.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/css/search.css" />
+        <link rel="stylesheet" href="assets/css/customStylesBootstrap.css" />
+        <link rel="stylesheet" href="assets/css/modal.css" />
     </head>
     <body>
         <div class="container-fluid bg-light__blue pb-5">
@@ -32,7 +31,7 @@
                     <div class="col-md-1 col-xl-1">
                         <a href="#!">
                             <img
-                                src="../assets/img/logo_web/logo-main.png"
+                                src="assets/img/logo_web/logo-main.png"
                                 alt="logo"
                                 width="80px"
                                 height="80px"
@@ -143,7 +142,7 @@
                             <i class="ti-shopping-cart"></i>
                             <div class="account">
                                 <img
-                                    src="./../assets/img/account-avatar.png"
+                                    src="assets/img/account-avatar.png"
                                     alt="Avatar"
                                     class="avatar"
                                     width="100%"
@@ -167,78 +166,15 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container-fluid bg-light__blue pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-xl-6">
-                        <div id="image"></div>
-                    </div>
-                    <div class="col-md-6 col-xl-6">
-                        <h3 id="productName"></h3>
-                        <div class="row">
-                            <span id="price"></span>
-                            <span>₫</span>
-                        </div>
-                        <div class="row">
-                            <span class="transport">Vận chuyển: </span>
-                            <span class="transport"
-                                >Phí vận chuyển: 22,000₫ - 26,000₫</span
-                            >
-                        </div>
-                        <div class="row">
-                            <h3 class="title">Mô tả sản phẩm</h3>
-                            <p id="desc"></p>
-                        </div>
-                        <div class="row">
-                            <div class="qty-grp">
-                                <label for="txtqty">Số lượng</label>
-                                <div class="qty">
-                                    <button
-                                        type="button"
-                                        class="btn-qty"
-                                        id="minius"
-                                    >
-                                        <i class="ti-minus"></i>
-                                    </button>
-                                    <input
-                                        type="text"
-                                        name="txtqty"
-                                        id="txtqty"
-                                        value="1"
-                                        min="1"
-                                        max="14785"
-                                    />
-                                    <button
-                                        type="button"
-                                        class="btn-qty"
-                                        id="plus"
-                                    >
-                                        <i class="fa-regular fa-plus"></i>
-                                    </button>
-                                </div>
-                                <span>14785</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="purchasing">
-                                <button
-                                    type="button"
-                                    class="btn-purchar"
-                                    onclick="openTT()"
-                                >
-                                    <i class="ti-shopping-cart"></i>
-                                    <span>Thêm vào giỏ hàng</span>
-                                </button>
-                                <button
-                                    type="button"
-                                    class="btn-buy"
-                                    onclick="openTT()"
-                                >
-                                    Mua Ngay
-                                </button>
-                            </div>
+            <div class="container" style="padding-bottom: 165px">
+                <div class="row pt-5">
+                    <div class="search-title"></div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-xl-12 col-md-12">
+                        <div id="searchResult">
+                            <div class="fruits"></div>
                         </div>
                     </div>
                 </div>
@@ -443,6 +379,7 @@
                                         id="txtGioiTinh1"
                                         type="radio"
                                         name="groupGioiTinh"
+                                        value="Nam"
                                     />
                                     <label
                                         for="txtGioiTinh1"
@@ -453,6 +390,7 @@
                                         id="txtGioiTinh2"
                                         type="radio"
                                         name="groupGioiTinh"
+                                        value="Nữ"
                                     />
                                     <label
                                         for="txtGioiTinh2"
@@ -497,7 +435,11 @@
                                 </div>
                             </div>
                             <div class="modal-action">
-                                <input type="submit" value="Đăng ký" />
+                                <input
+                                    type="submit"
+                                    value="Đăng ký"
+                                    id="btnDK"
+                                />
                                 <input type="reset" value="Xóa" />
                             </div>
                         </form>
@@ -584,12 +526,53 @@
                 </div>
             </div>
         </div>
-
         <div id="toast"></div>
-        <script src="../assets/JS/main.js"></script>
-        <script src="../assets/JS/login.js"></script>
-        <script src="../assets/JS/renderProduct.js"></script>
-        <script src="../assets/JS/search.js"></script>
-        <script src="../assets/js/thanhToan.js"></script>
+        <script>
+            let searchResult = JSON.parse(localStorage.getItem("searchResult"));
+            let searchQuery = localStorage.getItem("searchQuery");
+            let searchResultHTML = "";
+            document.title = `Tìm kiếm: ${searchQuery}`;
+
+            if (searchResult && searchResult.length > 0) {
+                document.querySelector(
+                    ".search-title"
+                ).innerHTML = `<h2>Kết quả tìm kiếm cho từ khóa <strong class = "text-danger">${searchQuery}</strong></h2>`;
+                searchResult.forEach((product) => {
+                    searchResultHTML += `
+                                            <div class = "item">
+                                                <a href="ChiTietSanPham.html">
+                                                    <img
+                                                        src="${product.image}"
+                                                        alt="${product.name}"
+                                                        class="thumb"
+                                                        onclick="setProductID(${product.id})"
+                                                    />
+                                                </a>
+                                                <div class = "fruit-info">
+                                                    <h3 class="sub-title">${product.name}</h3>
+                                                    <p class="desc">${product.desc}</p>
+                                                    <div class="purchasing">
+                                                        <span class="price">${product.price}</span>
+                                                        <a
+                                                            href="ChiTietSanPham.html"
+                                                            class="btn"
+                                                            onclick="setProductID(${product.id})"
+                                                        >
+                                                            Thêm vào giỏ hàng
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        `;
+                });
+            } else {
+                searchResultHTML = `<h2>Không có kết quả tìm kiếm cho từ khóa '<strong class = "text-danger">${searchQuery}</strong>'</h2>`;
+            }
+
+            document.querySelector(".fruits").innerHTML = searchResultHTML;
+        </script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/JS/login.js"></script>
+        <script src="assets/JS/search.js"></script>
     </body>
 </html>

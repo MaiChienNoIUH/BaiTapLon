@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Trang thanh toán</title>
-        <link rel="icon" href="../assets/img/face-icon/logo3.jpg" />
+        <title>Thông tin trang Web</title>
+        <link rel="icon" href="assets/img/face-icon/logo3.jpg" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,14 +15,14 @@
         />
         <link
             rel="stylesheet"
-            href="../assets/font/themify-icons/themify-icons.css"
+            href="assets/font/themify-icons/themify-icons.css"
         />
 
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-        <script src="../assets/js/jquery-3.6.4.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../assets/css/customStylesBootstrap.css" />
-        <link rel="stylesheet" href="../assets/css/modal.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/css/customStylesBootstrap.css" />
+        <link rel="stylesheet" href="assets/css/modal.css" />
     </head>
     <body>
         <div class="container-fluid bg-light__blue pb-5">
@@ -31,7 +31,7 @@
                     <div class="col-md-1 col-xl-1">
                         <a href="#!">
                             <img
-                                src="../assets/img/logo_web/logo-main.png"
+                                src="assets/img/logo_web/logo-main.png"
                                 alt="logo"
                                 width="80px"
                                 height="80px"
@@ -126,7 +126,7 @@
                                 <i class="ti-shopping-cart"></i>
                                 <div class="account">
                                     <img
-                                        src="./../assets/img/account-avatar.png"
+                                        src="assets/img/account-avatar.png"
                                         alt="Avatar"
                                         class="avatar"
                                         width="100%"
@@ -152,81 +152,74 @@
             </div>
 
             <div class="container">
-                <div class="row mt-5 mb-5 bg-light" style="width: 800px; margin: auto; padding: 30px;">
+                <div class="row mt-5 mb-5">
                     <section class="table-responsive">
-                        <div class="col-md-12 col-xl-12">
-                            <h4 class="text-center">ĐẶT MUA SẢN PHẨM</h4>
-                        </div>
+                        <table
+                            class="table table-bordered table-light table-primary table-striped"
+                            id="tbDSV"
+                        >
+                            <h4 class="text-center">
+                                Đề tài: Website giới thiệu, bán đồ trái cây trực
+                                tuyến!
+                            </h4>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>MÃ</th>
+                                    <th>HỌ TÊN</th>
+                                    <th>ĐỊA CHỈ</th>
+                                    <th>GIỚI TÍNH</th>
+                                    <th>LỚP</th>
+                                    <th>KHOA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>21082081</td>
+                                    <td>Võ Đình Thông</td>
+                                    <td>Phú Yên</td>
+                                    <td>Nam</td>
+                                    <td>DHKTPM17C</td>
+                                    <td>CNTT</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>21106521</td>
+                                    <td>Mai Chiến Nô</td>
+                                    <td>Hòa Hội, Xuyên Mộc, BR-VT</td>
+                                    <td>Nam</td>
+                                    <td>DHKTPM17C</td>
+                                    <td>CNTT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
 
-                        <div class="col-md-12 col-xl-12">
-                            <form>
-                                <div class="form-group">
-                                    <label for="txtDiaChi">Địa chỉ nhận hàng</label>
-                                    <input type="text" class="form-control" name="txtDiaChi" id="txtDiaChi" onblur="kiemTraDC()" placeholder="Nhập địa chỉ">
-                                    <span id="tbDC">*</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="txtSDT">Số điện thoại khách hàng</label>
-                                    <input type="text" class="form-control" name="txtSDT" id="txtSDT" onblur="kiemTraSDT()" placeholder="Nhập số ĐT">
-                                    <span id="tbSDT">*</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <table class="table table-bordered table-hover table-light table-striped">
-                                        <thead class="bg-dark">
-                                            <tr class="text-white text-center">
-                                                <th>Tên sản phẩm</th>
-                                                <th>Số lượng</th>
-                                                <th>Đơn giá</th>
-                                                <th>Thành tiền</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-center">
-                                            <tr>
-                                                <td id="productName"></td>
-                                                <td id="qty"><input type="text" name="soLuong" id="txtSoLuong" onkeyup="tinhTien()"></td>
-                                                <td id="price"></td>
-                                                <td id="thanhTien"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="row"><Br></div>
-                                <div class="form-group row">
-                                    <label for="" class="col-sm-3 col-form-label">Hình thức vận chuyển</label>
-                                    <div class="col-sm-4">
-                                        <select class="form-control" name="vanChuyen" id="vanChuyen" onchange="validateSelectBox(this)">
-                                            <option value="50000">Nhanh</option>
-                                            <option value="23000">Chậm</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-1">
-
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <span id="tbGiaVanChuyen">*</span> &nbsp;<span>VNĐ</span>
-                                    </div>
-                                </div>
-
-
-                                <div class="row"><Br></div>
-                                <div class="form-group">
-                                    <label for="">Hình thức thanh toán: </label>
-                                    <input type="radio" name="checkHinhThucTT" id="checkHinhThucTT"> Thẻ tín dụng/Ghi nợ &nbsp;&nbsp;
-                                    <input type="radio" name="checkHinhThucTT" id="checkHinhThucTT" checked> Thanh toán khi nhận hàng
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Tổng tiền: </label>
-                                    <input type="text" class="form-control" name="txtTong" id="txtTong" disabled>
-                                </div>
-
-                                <div class="form-group text-center">
-                                   <button type="button" class="btn btn-block btn-success" onclick="datHang()">Đặt hàng</button>
-                                </div>
-                            </form>
-                        </div>
+                <div class="row">
+                    <section class="table-responsive">
+                        <table
+                            class="table table-bordered table-light table-primary table-striped"
+                            id="tbDK"
+                        >
+                            <h4 class="text-center">
+                                DANH SÁCH ĐĂNG KÝ TÀI KHOẢN THÀNH CÔNG
+                            </h4>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>HỌ TÊN</th>
+                                    <th>EMAIL</th>
+                                    <th>NGÀY SINH</th>
+                                    <th>SỐ ĐIỆN THOẠI</th>
+                                    <th>ĐỊA CHỈ</th>
+                                    <th>GIỚI TÍNH</th>
+                                    <th>MẬT KHẨU</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                     </section>
                 </div>
             </div>
@@ -574,12 +567,10 @@
                     </div>
                 </div>
             </div>
-    
-            <div id="toast"></div>
         </div>
-        <script src="../assets/JS/main.js"></script>
-        <script src="../assets/JS/renderProduct.js"></script>
-        <script src="../assets/JS/login.js"></script>
-        <script src="../assets/js/thanhToan.js"></script>
-        <script src="../assets/JS/search.js"></script>
+        
+        <div id="toast"></div>
+        <script src="assets/JS/main.js"></script>
+        <script src="assets/JS/login.js"></script>
+        <script src="assets/JS/search.js"></script>
 </html>
