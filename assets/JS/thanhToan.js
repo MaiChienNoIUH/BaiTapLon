@@ -1,5 +1,5 @@
 function openTT(){
-    window.open("ThanhToan.html");
+    window.open("https://maichiennoiuh.github.io/BaiTapLon/ThanhToan.html");
 }
 
 function kiemTraDC() {
