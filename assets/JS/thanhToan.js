@@ -70,7 +70,8 @@ function tinhTien(){
                 // html += options[j].value;
                 if (options[j].value == "50000") {
                     $("#txtTong").value = (sl * donGia + 50000);
-                } else if (options[j].value == "23000") {
+                }
+                if (options[j].value == "23000") {
                     $("#txtTong").value = (sl * donGia + 23000);
                 }
             }

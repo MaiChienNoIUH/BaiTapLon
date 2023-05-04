@@ -160,13 +160,13 @@ function loginUser(email, password) {
 }
 
 // Xử lý sự kiện đăng ký
+var stt = 0;
 const signUpForm = $(".signUp-form-container");
 signUpForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Ngăn chặn form submit
     var email = $("#txtEmail").value;
     var password = $("#txtMatKhau").value;
     if (submitForm()) {
-        var stt = 1;
         var ten = $("#txtHoTen").value;
         var email = $("#txtEmail").value;
         var ngaySinh = $("#txtNgaySinh").value;
@@ -179,7 +179,7 @@ signUpForm.addEventListener("submit", function (event) {
         var matKhau = $("#txtMatKhau").value;
         let trNew =
             "<tr><td>" +
-            stt +
+            (++stt) +
             "</td><td>" +
             ten +
             "</td><td>" +
