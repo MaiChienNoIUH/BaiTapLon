@@ -1,7 +1,7 @@
 let listProduct = [
     {
         id: 1,
-        name: "Nho Han Quoc",
+        name: "Nho Hàn Quốc",
         image: "../assets/img/content-img/NhoMauDon.png",
         price: 900000,
         desc: "Nho với trái to tròn, vỏ có màu xanh hổ phách không bị chát, vị ngọt đậm và mọng nước, ăn giòn với hương thơm rất đặc trưng.",
