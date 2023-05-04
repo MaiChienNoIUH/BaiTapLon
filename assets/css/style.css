@@ -637,7 +637,7 @@ span {
 .modal-SignUp .modal-container {
     background-color: #fff;
     width: 850px;
-    height: 620px;
+    height: 500px;
     max-width: calc(100%-32px);
     position: relative;
     animation: modalFadeIn ease 0.4s;
@@ -653,7 +653,6 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
 .modal-SignUp .modal-body__wrapper .item {

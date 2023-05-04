@@ -55,7 +55,7 @@ function kiemTraHoTen() {
     var re = /^([A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]+))+$/;
     if (re.test($("#txtHoTen").value) == false) {
         tbTen.innerText =
-            "*Bắt buộc nhập ít nhất 2 từ, bắt đầu bằng kí tự in hoa";
+            "*Nhập ít nhất 2 từ, bắt đầu bằng kí tự in hoa";
         return false;
     } else {
         tbTen.innerText = "*";

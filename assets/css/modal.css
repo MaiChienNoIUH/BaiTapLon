@@ -79,7 +79,7 @@ ul.account-feature {
 /* Css Modal chung */
 .modal {
     position: fixed;
-    top: 50px;
+    top: 80px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -100,7 +100,7 @@ ul.account-feature {
 
 .modal-action > input {
     width: 98px;
-    height: 50px;
+    height: 35px;
 }
 
 .modal.open {
@@ -148,6 +148,7 @@ ul.account-feature {
 
 .modal-body {
     padding: 20px;
+    padding-bottom: 0px;
 }
 
 .modal-label {
@@ -213,7 +214,7 @@ input[type="reset"]:hover {
 
 span {
     color: red;
-    font-size: 16px;
+    font-size: 13px;
 }
 /*end: Css Modal chung */
 
@@ -221,7 +222,7 @@ span {
 .modal-SignUp .modal-container {
     background-color: #fff;
     width: 850px;
-    height: 620px;
+    height: 520px;
     max-width: calc(100%-32px);
     position: relative;
     animation: modalFadeIn ease 0.4s;
@@ -233,11 +234,15 @@ span {
     border: none;
 }
 
+.modal-SignUp .modal-body{
+    padding-top: 0px;
+}
+
 .modal-SignUp .modal-body__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .modal-SignUp .modal-body__wrapper .item {
@@ -272,7 +277,7 @@ span {
 .modal-SignIn .modal-container {
     background: #fff;
     width: 440px;
-    height: 540px;
+    height: 500px;
     max-width: calc(100%-32px);
     position: relative;
     animation: modalFadeIn ease 0.4s;
@@ -281,7 +286,6 @@ span {
 
 .modal-SignIn .modal-container .modal-header {
     border-radius: 20px 20px 0 0;
-    margin-bottom: 30px;
     border: none;
     padding-top: 30px;
 }
@@ -296,7 +300,7 @@ span {
 
 .modal-SignIn .modal-body .item > label {
     color: #0d0c22;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -372,9 +376,7 @@ span {
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: none;
-    margin-top: 10px;
-}
+    border: none;}
 
 @media (min-width: 576px) {
     .modal-dialog {
