@@ -563,37 +563,35 @@
             if (searchResult && searchResult.length > 0) {
                 document.querySelector(
                     ".search-title"
-                ).innerHTML = `<h2>Kết quả tìm kiếm cho từ khóa <strong class = "text-danger">${searchQuery}</strong></h2>`;
+                ).innerHTML = `<h2>Kết quả tìm kiếm cho từ khóa <strong class="text-danger">${searchQuery}</strong></h2>`;
                 searchResult.forEach((product) => {
                     searchResultHTML += `
-                                            <div class = "item">
-                                                <a href="ChiTietSanPham.html">
-                                                    <img
-                                                        src="${product.image}"
-                                                        alt="${product.name}"
-                                                        class="thumb"
-                                                        onclick="setProductID(${product.id})"
-                                                    />
-                                                </a>
-                                                <div class = "fruit-info">
-                                                    <h3 class="sub-title">${product.name}</h3>
-                                                    <p class="desc">${product.desc}</p>
-                                                    <div class="purchasing">
-                                                        <span class="price">${product.price}</span>
-                                                        <a
-                                                            href="ChiTietSanPham.html"
-                                                            class="btn"
-                                                            onclick="setProductID(${product.id})"
-                                                        >
-                                                            Thêm vào giỏ hàng
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        `;
+            <div class="item">
+                <a href="ChiTietSanPham.html">
+                    <img src="${product.image}"
+                        alt="${product.name}"
+                        class="thumb"
+                        onclick="setProductID(${product.id})"
+                    />
+                </a>
+                <div class="fruit-info">
+                    <h3 class="sub-title">${product.name}</h3>
+                    <p class="desc">${product.desc}</p>
+                    <div class="purchasing">
+                        <span class="price">${product.price}</span>
+                        <a href="ChiTietSanPham.html"
+                            class="btn"
+                            onclick="setProductID(${product.id})"
+                        >
+                            Thêm vào giỏ hàng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
                 });
             } else {
-                searchResultHTML = `<h2>Không có kết quả tìm kiếm cho từ khóa '<strong class = "text-danger">${searchQuery}</strong>'</h2>`;
+                searchResultHTML = `<h2>Không có kết quả tìm kiếm cho từ khóa '<strong class="text-danger">${searchQuery}</strong>'</h2>`;
             }
 
             document.querySelector(".fruits").innerHTML = searchResultHTML;
